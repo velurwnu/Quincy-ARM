@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<TITLE>Quincy User's Guide</TITLE>
+</HEAD>
+<BODY>
+
+<H1>Running a Program</H1>
+
+<P>To run a program that is loaded into Quincy's editor:
+
+<OL>
+
+<LI>Click the Run tool button.</LI>
+<P><IMG SRC="./pics/run.gif">
+<LI>Or Press F9.</LI>
+<LI>Or choose the Run command on the Debug menu.</LI>
+<LI>If the program is out of date--if the source code file has been changed so that it is newer than the executable--a dialog asks first if you want to compile the program. If you respond by clicking Yes, Quincy launches the compiler and runs the program only when a successful compile has completed.</LI>
+
+</OL>
+
+
+<a name=01><h2>Console Window</h2>
+
+<P>Before running the program, Quincy creates a console window (unless the program is built from a Quincy project that specifies a GUI target), which serves as standard console input and output for the program. You read text from and type text into that window as if you were running the program from a DOS command line. The following screen shot shows a console window with a program that has run to completion.
+<P ALIGN="CENTER"><IMG SRC="./pics/fig05.gif">
+
+</I><P>Quincy always displays the message that says "Press Enter to return to Quincy..." in the console window to give you time to read the output before Quincy closes the console. Press the Enter key to close the window and return to the Quincy IDE.
+
+
+<H2>Stopping a Program</H2>
+
+<P>To stop a program in progress before it has run to completion.</P>
+<OL>
+
+<LI>Click the Stop tool button.</LI>
+<P><IMG SRC="./pics/stop.gif">
+<LI>Or select the Stop command on the Debug menu.</LI>
+<LI>Or press Ctrl+C when the program is waiting for the keyboard at the
+
+<a href="./running.htm#01">console window</a>
+
+. This option terminates Quincy along with the running program and is unpredictable.</LI>
+<LI>Or click the X icon at the right end of the console window's title bar. Windows displays a dialog box asking if you really want to do that. This option usually terminates Quincy along with the running program. It appears to lock up Windows for a few seconds while it figures out that it is supposed to close the console window.</LI>
+
+</OL>
+
+<P>It is best not to use the procedures listed as options 3 and 4 but to use the Stop command or Stop tool button instead.</P>
+
+<p>
+<br>
+<center>
+<a href="./examples.htm">
+<--previous page</a>
+<a href="./debugging.htm">
+next page--></a>
+</center>
+
+
+</BODY>
+</HTML>

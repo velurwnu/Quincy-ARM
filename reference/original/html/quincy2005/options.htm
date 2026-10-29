@@ -1,0 +1,130 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<H1>Setting Options</H1>
+
+
+<P>There are several options for how the program is to be compiled and how Quincy is to run it from within the IDE. You set these options prior to compiling and running the program. Quincy remembers the option settings from session to session.</P>
+
+<P>If you are working with a Quincy Project as described in 
+<a href="./projects.htm">Working with Projects</a>, the options settings are stored in the Project file when you save it. If you change project-related options, Quincy will prompt you to save the Project file when you close it. The next time you load the project, the settings are restored to what you set them to here.</P>
+
+<P>If you are using Quincy with the tutorial examples as described in 
+
+<a href="./examples.htm">Example Programs</a>, the tutorial command files set the options that each example uses. You can override these options durint the session, but the tutorial command files are not affected when you do. The next time you open the tutorial, its programmed options are restored.</P>
+
+<P>To set Quincy's options choose the Options menu command. Quincy opens the Options dialog, a tabbed dialog with tabs for 
+
+<a href=#01>Build options</a>, 
+
+<a href=#02>Run options</a>, and 
+
+<a href=#03>Editor options</a>.
+<p>
+
+<A name=01><h2>Build Options</h2></a>
+
+These are the options that control how Quincy builds a program, including how the compiler processes the source code, what kind of code is generated, and where the compiler looks for header files and libraries. 
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig15.gif"></P>
+
+<OL>
+<li>Select the Build Tab in the Options dialog as shown above.
+<LI>Check the Debugging Information Added checkbox if you want to use the IDE to step through the program or set breakpoints in the source code display when you debug the program.</LI>
+<LI>Check the Exception Handling Enabled checkbox if your program uses C++ exception handling (try/throw/catch).</LI>
+<LI>Check the Runtime Type Information Enabled checkbox if your program uses the <FONT FACE="Courier,Courier New" SIZE=4>dynamic_cast</FONT> or <FONT FACE="Courier,Courier New" SIZE=4>typeid</FONT> operators. Any source code file that uses these operators should include the Standard C++ <B>&lt;typeinfo&gt;</B> header file.</LI>
+<li>Check the String ANSI/ISO Compliance checkbox if you want the compiler to test your code for compliance to Standard C and C++.
+
+<LI>Enter any preprocessor macros that the program needs in the Define field. Whatever you type here will be treated as if you put it at the front of the source code as the arguments to a #define preprocessor directive with this exception: to define a global symbol with a value, use an equals sign (=) as shown here:</LI>
+
+<FONT FACE="Courier,Courier New" SIZE=4><P>VERSION=2.5</P></FONT>
+
+<P>The example just shown compiles as if the source code file included this statement:</P>
+
+<FONT FACE="Courier,Courier New" SIZE=4><P>#define VERSION 2.5</P></FONT>
+
+<P>If you need more than one macro, separate them in the Define field with semicolons as shown here:</P>
+
+<FONT FACE="Courier,Courier New" SIZE=4><P>NDEBUG;VERSION=2.5</P></FONT>
+
+<LI>Enter paths to folders where the preprocessor can search for header files specified with the <FONT FACE="Courier,Courier New" SIZE=4>#include &lt;file.h&gt;</FONT> directive. Separate the paths with semicolons. You can use relative paths or fully qualified paths. The preprocessor searches the paths in the order you enter them here. If the header file is not in one of these paths, then the preprocessor searches the compiler's INCLUDE subdirectories.</LI>
+<LI>Enter paths to folders where the linker can search for library files that a Project file includes. (See "Quincy Projects") Separate the paths with semicolons. You can use relative paths or fully qualified paths. The linker searches the paths in the order you enter them here. If a library file is not in one of these paths, then the linker searches the compiler's LIB subdirectories.</LI>
+<li>Select the level of optimization the compiler should use. This option is a value from 0 to 3. If you selected Debugging information, this value defaults to zero.
+<li>Enter the path where the gcc compiler is installed. If you leave this field blank, Quincy looks for the compiler in the /mingw subdirectory under the directory where Quincy is installed.
+<li>Enter the path where the gdb debugger is installed. If you leave this field blank, Quincy looks for the debugger in the /gdb subdirectory under the directory where Quincy is installed. If no debugger is there, Quincy looks for one in the /bin subdirectory under the directory where the compiler is installed.
+<li>Enter any additional command line arguments that Quincy should pass to the gcc compiler program. For example, adding -v causes Quincy to display the compiler's verbose information in the Build dialog.
+
+</OL>
+
+For the Includes, Libraries, and Compiler fields you can click Browse button to open the Browse for Folder dialog shown here.
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig15a.gif"></P>
+
+Browse to the folder you want to add to the list in the Option dialog's Build tab, and click OK.
+
+<A name=02><h2>Run Options</h2></a>
+<ol>
+<li>Select the Run tab on the Options dialog as shown here.
+<p>
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig15b.gif"></P>
+
+<li>For console applications, set the Command Line options according to how you wish to run the program from within Quincy.
+
+	<ul>
+	<li>Choose No Options if the program does not process command line parameters
+	<li>Click Prompt Each Time... if you want Quincy to prompt for command line parameters every time you run the program
+	<li>Click Use This and enter the command line options in the accompanying text box control to always pass the same command line parameters to the program when Quincy runs it.
+	</ul>
+
+<li>Enter the path to the runtime working subdirectory. Quincy will set that subdirectory as the default one before running the program. The program will read and write data files with ambiguous path specifications relative to this path.
+<li>Leave the path blank to have the program use the subdirectory of its source code files as the runtime working directory.
+</ol>
+
+<A name=03><h2>Editor Options</h2></a>
+<ol>
+<li>Select the Editor tab on the Options dialog as shown here.
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig15c.gif"></P>
+
+<p>As you change the editor's settings, the simulated source code display in the Editor tabbed dialog reflects your changes.
+<p>
+<li>Select the number of character positions for each tab stop by changing the scroll button control.
+<li>Select the maximum number of edit action undos that Quincy stores.
+<li>Enable or disable the autoindent feature by clicking the Autoindent check box control. With autoindent disabled, Quincy always returns the insertion cursor to the left margin when you press Enter.
+<li>Select whether the editor inserts space characters or tab characters into the text when you press the Tab key or use the autoindent feature.
+<li>Enable or disable syntax color highlighting.
+<li>With syntax color highlighting:
+	<ul>
+	<li> click one of the color bars next to the text feature you want to highlight with color. This action opens the Color dialog shown here.
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig15d.gif"></P>
+
+	<li>Click the color you want to use for the text feature selected.
+	<li>Click OK.
+	</ul>
+<li>To revert to Quincy's default color scheme, click Restore Defaults.
+<li>Change the font size by clicking the + button to increase the font size and the - button to decrease the font size. 
+<li>Click the Bold button to toggle the font between normal width and boldface.
+</ol>
+
+<h2>Recording Your Option Settings</h2>
+<ol>
+<li>When you have made all the options changes you want to make, click OK on the Options dialog.
+<li>Or, to nullify any changes you might have made, Click Cancel on the Options dialog.
+</ol>
+
+<p>
+<br>
+<center>
+<a href="./starting.htm">
+<--previous page</a>
+<a href="./examples.htm">
+next page--></a>
+</center>
+
+
+</BODY>
+</HTML>

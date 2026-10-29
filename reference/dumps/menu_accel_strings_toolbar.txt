@@ -1,0 +1,354 @@
+=== MENU
+[&File]
+  57600: &New...	Ctrl+N
+  57601: &Open...	Ctrl+O
+  57602: &Close
+  32813: Clo&se All
+  57603: &Save	Ctrl+S
+  32814: Save A&ll
+  57604: Save &As...
+  ----
+  57607: &Print...	Ctrl+P
+  57606: Print S&etup...
+  57609: Print Pre&view
+  ----
+  57616: Recent File
+  ----
+  57665: E&xit
+[&Edit]
+  57643: &Undo	Ctrl+Z
+  57644: &Redo	Ctrl+Y
+  ----
+  57635: Cu&t	Ctrl+X
+  57634: &Copy	Ctrl+C
+  57637: &Paste	Ctrl+V
+  57632: &Clear	Del
+  ----
+  57642: Select &All	Ctrl+A
+  ----
+  57636: &Find...	Ctrl+F
+  57641: R&eplace...	Ctrl+H
+  32829: Find &Next	F3
+  ----
+  32830: Match &braces	Ctrl+{
+[&View]
+  59392: &Toolbar
+  59393: &Status Bar
+  ----
+  32799: &Watch Window	Ctrl+W
+  32836: &Debugger console
+[&Project]
+  32774: &Insert File(s)...	Ins
+  32852: Open &Headers
+  32775: &Delete File(s)	Del
+  32816: &Properties...
+  ----
+  32776: &Compile	F5
+  32840: &Link	Ctrl+F5
+  ----
+  32777: &Build	F6
+  32805: &Rebuild All 	Ctrl+F6
+  32782: &Stop
+  ----
+  32778: &Execute	F9
+[&Debug]
+  32778: &Run	F9
+  32790: &Step	F7
+  32796: Step &Over	F8
+  32806: Step To C&ursor	F10
+  32815: Step Out of &Function
+  32782: Sto&p
+  ----
+  32791: &Breakpoint	F2
+  32792: &Clear Breakpoints
+  ----
+  32798: &Examine...	Ctrl+E
+  32799: &Watch...	Ctrl+W
+[&Tools]
+  32818: &Grep (find in files)...
+  32838: &Code Beautifier...
+  32817: &Resource Editor
+  32848: &FLUID Screen Designer
+  32849: Command &Prompt
+  ----
+  [&Macro]
+    32826: &Record	Alt+R
+    32827: &Playback	Alt+M
+  ----
+  32784: &Options...
+[&Window]
+  57648: &New Window
+  57650: &Cascade
+  57651: &Tile
+  32813: Close A&ll
+  57649: &Arrange Icons
+[&Help]
+  32844: Programmer's &Help
+  57670: Quincy 2005 &User's Guide
+  ----
+  32811: &Example Programs...	F4
+  57664: &About Quincy 2005...
+=== ACCEL_128_1033.bin
+  32830: '\x1b'
+  32777: F6
+  32776: F5
+  57669: Shift+F1
+  32791: F2
+  32821: Ctrl+F9
+  32798: Ctrl+E
+  32790: F7
+  32796: F8
+  32806: F10
+  32799: Ctrl+W
+  57634: Ctrl+C
+  57634: Ctrl+Ins
+  57635: Shift+Del
+  57635: Ctrl+X
+  57636: Ctrl+F
+  32829: F3
+  57637: Ctrl+V
+  57637: Shift+Ins
+  57644: Ctrl+Y
+  57641: Ctrl+H
+  57642: Ctrl+A
+  57643: Alt+Back
+  57643: Ctrl+Z
+  32778: F9
+  57600: Ctrl+N
+  57601: Ctrl+O
+  57607: Ctrl+P
+  57603: Ctrl+S
+  57670: F1
+  32827: Alt+M
+  32826: Alt+R
+  32828: Alt+S
+  32811: F4
+  32840: Ctrl+F5
+  32805: Ctrl+F6
+=== ACCEL_129_1033.bin
+  32775: Del
+  32774: Ins
+  32781: Enter
+=== ACCEL_30997_1033.bin
+  58114: PgDn
+  58115: PgUp
+  58112: Esc
+=== STRINGS
+  101: '\nText\nC++ Source File\nC++ Source Code Files (*.cpp/*.cxx/*.cc)\n.cpp\nQuincy.Document\nText Document\n\n'
+  102: '\nText\nC Source File\nC Source Code Files (*.c)\n.c\nQuincy.Document\nText Document\n\n'
+  103: '\nText\nHeader File\nHeader Files (*.h)\n.h\nQuincy.Document\nText Document\n\n'
+  104: '\nText\nResource Source File\nResource Source Files (*.rc)\n.rc\nQuincy.Document\nText Document\n\n'
+  105: '\nText\nDLL Export List\nDLL Export List (*.def)\n.def\nQuincy.Document\nText Document\n\n'
+  108: '\nText\nText File\nText Files (*.*)\n.*\nQuincy.Document\nText Document\n\n'
+  128: 'Quincy 2005'
+  129: '\nProj\nProject\nQuincy Project Files (*.prj)\n.PRJ\nProj.Document\nProject Document'
+  130: '\nText\nASCII Text\n\n\nEditor.Document\nEditor Document'
+  32771: 'Insert a file in the project'
+  32772: 'Delete a file from the project'
+  32773: 'Delete a file from the project'
+  32774: 'Insert a file into the project\nInsert'
+  32775: 'Delete the selected file from the project\nDelete'
+  32776: 'Compile the source code file into an object file\nCompile'
+  32777: 'Build an executable file\nBuild'
+  32778: 'Execute the program\nRun'
+  32782: 'Stop the running program\nStop'
+  32784: 'Options/nSet Quincy options'
+  32785: 'Project settings\nSettings'
+  32786: 'Display the latest compiler error/warning message log\nErrors'
+  32790: 'Step through the program\nStep'
+  32791: 'Set and clear a breakpoint\nBreakpoint'
+  32792: 'Clear all breakpoints\nClear breakpoints'
+  32796: 'Step over the function\nStep Over'
+  32798: 'Examine and modify variables\nExamine'
+  32799: 'Watch variables while the program runs\nWatch'
+  32803: 'Turn the Watch Window display on/off\nWatch Window'
+  32805: 'Recompile and link everything in the project\nBuild All'
+  32806: 'Step to the line where the cursor is positioned\nStep to cursor'
+  32811: 'View the Example Programs\nExample programs'
+  32812: 'Append files to the project list'
+  32813: 'Close all document windows'
+  32814: 'Save all active documents\nSave All'
+  32815: 'Step out of the current function\nStep out'
+  32816: 'View and modify the projects properties\nProperties'
+  32817: 'Windows resource file (*.res) editor\nResource editor'
+  32818: 'Text search utility\nGrep'
+  32820: 'Set paths to the compiler tools and working files'
+  32821: 'Start Debugging the Program\nDebug'
+  32823: 'View trace window\nTrace Window'
+  32825: 'Check this item to use the experimental Standard C++ Library'
+  32827: 'Playback a macro'
+  32829: 'Find next matching string'
+  32830: 'Find matching brace character in source code\nMatch braces'
+  32836: 'View gdb console window\ngdb console'
+  32838: 'Code beautifier utility\nBeautifier'
+  32839: 'Display full pages\nPrint Preview'
+  32840: 'Combine object files and libraries to produce project target'
+  32844: 'C/C++  language & libraries info\nInfo'
+  32848: 'Open the fltk GUI builder'
+  32849: 'Open Windows console'
+  32852: 'Open project header file(s)'
+  57344: 'Quincy 2005'
+  57345: 'Press F1 for help'
+  57346: 'Select an object on which to get Help'
+  57600: 'Create a new Project\nNew'
+  57601: 'Open an existing document\nOpen'
+  57602: 'Close the active document\nClose'
+  57603: 'Save the active document\nSave'
+  57604: 'Save the active document with a new name\nSave As'
+  57605: 'Change the printing options\nPage Setup'
+  57606: 'Change the printer and printing options\nPrint Setup'
+  57607: 'Print the active document\nPrint'
+  57609: 'Display full pages\nPrint Preview'
+  57616: 'Open this document'
+  57617: 'Open this document'
+  57618: 'Open this document'
+  57619: 'Open this document'
+  57620: 'Open this document'
+  57621: 'Open this document'
+  57622: 'Open this document'
+  57623: 'Open this document'
+  57624: 'Open this document'
+  57625: 'Open this document'
+  57626: 'Open this document'
+  57627: 'Open this document'
+  57628: 'Open this document'
+  57629: 'Open this document'
+  57630: 'Open this document'
+  57631: 'Open this document'
+  57632: 'Erase the selection\nErase'
+  57633: 'Erase everything\nErase All'
+  57634: 'Copy the selection to the Clipboard\nCopy'
+  57635: 'Cut the selection and put it on the Clipboard\nCut'
+  57636: 'Find the specified text\nFind'
+  57637: 'Insert Clipboard contents\nPaste'
+  57640: 'Repeat the last action\nRepeat'
+  57641: 'Replace specific text with different text\nReplace'
+  57642: 'Select the entire document\nSelect All'
+  57643: 'Undo the last action\nUndo'
+  57644: 'Redo the previously undone action\nRedo'
+  57648: 'Open another window for the active document\nNew Window'
+  57649: 'Arrange icons at the bottom of the window\nArrange Icons'
+  57650: 'Arrange windows so they overlap\nCascade Windows'
+  57651: 'Arrange windows as non-overlapping tiles\nTile Windows'
+  57652: 'Arrange windows as non-overlapping tiles\nTile Windows'
+  57653: 'Split the active window into panes\nSplit'
+  57664: 'Display program information, version number and copyright\nAbout'
+  57665: 'Quit the application; prompts to save documents\nExit'
+  57666: 'Opens Help\nHelp Topics'
+  57667: 'List Help topics\nHelp Topics'
+  57668: 'Display instructions about how to use help\nHelp'
+  57669: 'Display help for clicked on buttons, menus and windows\nHelp'
+  57670: 'IDE help\nHelp'
+  57680: 'Switch to the next window pane\nNext Pane'
+  57681: 'Switch back to the previous window pane\nPrevious Pane'
+  59136: 'EXT'
+  59137: 'CAP'
+  59138: 'NUM'
+  59139: 'SCRL'
+  59140: 'OVR'
+  59141: 'REC'
+  59392: 'Show or hide the toolbar\nToggle ToolBar'
+  59393: 'Show or hide the status bar\nToggle StatusBar'
+  61184: 'Change the window size'
+  61185: 'Change the window position'
+  61186: 'Reduce the window to an icon'
+  61187: 'Enlarge the window to full size'
+  61188: 'Switch to the next document window'
+  61189: 'Switch to the previous document window'
+  61190: 'Close the active window and prompts to save the documents'
+  61202: 'Restore the window to normal size'
+  61203: 'Activate Task List'
+  61215: 'Activate this window'
+  61440: 'Open'
+  61441: 'Save As'
+  61442: 'All Files (*.*)'
+  61443: 'Untitled'
+  61445: 'Close print preview mode\nCancel Preview'
+  61446: 'an unnamed file'
+  61457: '&Hide'
+  61472: 'No error message is available.'
+  61473: 'An unsupported operation was attempted.'
+  61474: 'A required resource was unavailable.'
+  61475: 'Out of memory.'
+  61476: 'An unknown error has occurred.'
+  61477: 'An invalid argument was encountered.'
+  61504: 'on %1'
+  61505: '&One Page'
+  61506: '&Two Page'
+  61507: 'Page %u'
+  61508: 'Page %u\nPages %u-%u\n'
+  61509: 'prn'
+  61510: 'Output.prn'
+  61511: 'Printer Files (*.prn)|*.prn|All Files (*.*)|*.*||'
+  61512: 'Print to File'
+  61513: 'to %1'
+  61696: 'Invalid filename.'
+  61697: 'Failed to open document.'
+  61698: 'Failed to save document.'
+  61699: 'Save changes to %1?'
+  61700: 'Failed to create empty document.'
+  61701: 'The file is too large to open.'
+  61702: 'Could not start print job.'
+  61703: 'Failed to launch help.'
+  61704: 'Internal application error.'
+  61705: 'Command failed.'
+  61706: 'Insufficient memory to perform operation.'
+  61707: 'System registry entries have been removed and the INI file (if any) was deleted.'
+  61708: 'Not all of the system registry entries (or INI file) were removed.'
+  61709: 'This program requires the file %s, which was not found on this system.'
+  61710: 'This program is linked to the missing export %s in the file %s. This machine may have an incompatible version of %s.'
+  61712: 'Please enter an integer.'
+  61713: 'Please enter a number.'
+  61714: 'Please enter an integer between %1 and %2.'
+  61715: 'Please enter a number between %1 and %2.'
+  61716: 'Please enter no more than %1 characters.'
+  61717: 'Please select a button.'
+  61718: 'Please enter an integer between 0 and 255.'
+  61719: 'Please enter a positive integer.'
+  61720: 'Please enter a date and/or time.'
+  61721: 'Please enter a currency.'
+  61722: 'Please enter a GUID.'
+  61723: 'Please enter a time.'
+  61724: 'Please enter a date.'
+  61728: 'Unexpected file format.'
+  61729: '%1\nCannot find this file.\nPlease verify that the correct path and file name are given.'
+  61730: 'Destination disk drive is full.'
+  61731: 'Unable to read from %1, it is opened by someone else.'
+  61732: 'Unable to write to %1, it is read-only or opened by someone else.'
+  61733: 'An unexpected error occurred while reading %1.'
+  61734: 'An unexpected error occurred while writing %1.'
+  61744: '%1: %2\nContinue running script?'
+  61745: 'Dispatch exception: %1'
+  61836: 'Unable to read write-only property.'
+  61837: 'Unable to write read-only property.'
+  61840: 'Unable to load mail system support.'
+  61841: 'Mail system DLL is invalid.'
+  61842: 'Send Mail failed to send message.'
+  61856: 'No error occurred.'
+  61857: 'An unknown error occurred while accessing %1.'
+  61858: '%1 was not found.'
+  61859: '%1 contains an invalid path.'
+  61860: '%1 could not be opened because there are too many open files.'
+  61861: 'Access to %1 was denied.'
+  61862: 'An invalid file handle was associated with %1.'
+  61863: '%1 could not be removed because it is the current directory.'
+  61864: '%1 could not be created because the directory is full.'
+  61865: 'Seek failed on %1'
+  61866: 'A hardware I/O error was reported while accessing %1.'
+  61867: 'A sharing violation occurred while accessing %1.'
+  61868: 'A locking violation occurred while accessing %1.'
+  61869: 'Disk full while accessing %1.'
+  61870: 'An attempt was made to access %1 past its end.'
+  61872: 'No error occurred.'
+  61873: 'An unknown error occurred while accessing %1.'
+  61874: 'An attempt was made to write to the reading %1.'
+  61875: 'An attempt was made to access %1 past its end.'
+  61876: 'An attempt was made to read from the writing %1.'
+  61877: '%1 has a bad format.'
+  61878: '%1 contained an unexpected object.'
+  61879: '%1 contains an incorrect schema.'
+  61888: 'pixels'
+  62177: 'Uncheck'
+  62178: 'Check'
+  62179: 'Mixed'
+=== TOOLBAR 16 16 [57600, 57601, 57603, 32814, 0, 57607, 57609, 0, 57635, 57634, 57637, 57636, 0, 57643, 57644, 0, 32830, 0, 32777, 32805, 0, 32782, 32778, 32790, 32796, 32806, 32815, 0, 32791, 32792, 0, 32799, 32798, 0, 32811, 32808]

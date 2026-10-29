@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<H1>Examining and Modifying Variables</H1>
+
+<P>When a program is executing but the IDE has control--at a breakpoint or after a step--you can examine the values in variables that are in scope and modify their contents.
+
+<H2>Examine a Variable</H2>
+
+<OL>
+
+<LI>Click the Examine tool button.</LI>
+<P><IMG SRC="./pics/examine.gif">
+<LI>Or press Ctrl+E.</LI>
+<LI>Or choose the Examine command on the Debug menu.</LI>
+
+<P>Any of these actions opens the Examine dialog shown here. </P>
+<P ALIGN="CENTER"><IMG SRC="./pics/fig08.gif"></P>
+
+<LI>Type the name of a variable that is currently in scope into the Variable field.</LI>
+
+<br>You can enter any C/C++ expression that can be evaluated in the current scope of the program. If an expression has side effects, they come into play as soon as the examine is evaluated when you click OK. you 
+
+<LI>Click OK. The dialog box displays the type and current value of the variable. If the variable is not in scope, the dialog displays the ?? token.</LI>
+
+</OL>
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig08a.gif"></P>
+
+
+<H2>Modify the Variable's Value</H2>
+<OL>
+
+<LI>Tab to the Change field.</LI>
+<LI>Enter a new value from the keyboard.</LI>
+<br>(You can change the value only if the expression you entered is a C/C++ <i>lvalue</i> in the current scope of the program.)
+<LI>Click OK.
+</OL>
+<P>The new value is displayed, and when you continue running the program, the variable has the new value stored in it.</LI>
+
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig08b.gif"></P>
+
+
+<P>To close the Examine window and return to the IDE, click Close.</P>
+
+
+<p>
+<br>
+<center>
+<a href="./breaking.htm">
+<--previous page</a>
+<a href="./watch.htm">
+next page--></a>
+</center>
+
+</BODY>
+</HTML>

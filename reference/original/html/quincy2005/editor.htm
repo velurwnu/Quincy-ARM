@@ -1,0 +1,283 @@
+<HTML>
+<HEAD>
+<TITLE>Quincy User's Guide</TITLE>
+</HEAD>
+<BODY>
+
+<H1>Editing Source Code</H1>
+
+Quincy's editor is a typical text editor similar to those found in most software development environments. If you know how to enter text into Notepad, you'll know how to use Quincy. There are 
+
+<a href="./options.htm#03">editor options</a> you can set to change how Quincy displays text as you enter it. You can change the colors of the text display, how tabs are expanded, and whether the editor autoindents as you type.
+
+<h2>Entering Text</h2>
+Enter text by typing it. Quincy does not support word wrapping; the editor window scrolls horizontally if you type past the right margin. If you have syntax highlighting selected in the 
+
+<a href="./options.htm#03">editor options</a>,
+
+the text changes color as the editor parses those text elements--comments, key words, and string literals--that should be highlighted as shown here.
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig40.gif"></P>
+<p>
+<h2>The Insertion Cursor</h2>
+Observe the vertical black bar in the first column position on line 12 in the illustration above. That is the text insertion cursor. Although this illustration is static, when Quincy is running, the insertion cursor blinks so you can find it when you need to.
+
+When you type, the characters you type go where the cursor is positioned, and the cursor moves to the next position.
+<p>
+You can move the insertion cursor several ways:
+<ol>
+<li>Use the Home, End, Page Up, Page Down, and arrow keys.
+<li>Use those keys with the Ctrl key depressed.
+<li>Click in the editor window with the mouse.
+</ol>
+<p>The small pane in Quincy's status bar displays the current line and column position of the insertion cursor.
+<p>
+It is possible for the insertion cursor to be out of sight. If you scroll the document window horizontally or vertically with the scroll bars and the mouse, you can put the insertion cursor off screen. But it is still there. If you start typing when the insertion cursor is out of sight, Quincy changes the text's scrolling position so that the line where the insertion cursor is positioned is in view.
+
+<p>
+Quincy's editor does not have Insert/Overwrite modes of text entry like other editors do. Quincy is always in Insert mode, which is how editing source code is typically done.
+<p>
+<h2>Selecting Text</h2>
+Many editing operations are affected by whether a block of text is selected. Selected text is identified by a video highlight around the text. A selected block can span several lines of text as shown here.
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig43.gif"></P>
+
+
+<p>You can select a block of text several ways:
+<ol>
+<li>With the keyboard:
+	<ul>
+	<li>Move the selection cursor to one end of the block
+	<li>Hold down the shift key
+	<li>Move the selection cursor with the keyboard as described above.
+	</ul>
+<li>By dragging the mouse:
+	<ul>
+	<li>Move the mouse to one end of the block
+	<li>Hold down the left mouse button
+	<li>Drag the moust to the other end of the block
+	</ul>
+<li>Double-click a word to select only that word.
+<li>By performing a <a href=#find>Find</a> operation
+<li>To select all the text in the document press Ctrl+A or choose the Select All command on the Edit menu.
+
+</ol>
+
+<h2>Unselecting Text</h2>
+Almost any keyboard or mouse operation that does not affect a block of text will unselect it. Moving the insertion cursor, clicking elsewhere in the editor window, for example will unmark the text.
+
+<h2>Typing Into Selected Text</h2>
+If you type a character when a block of text is selected, the character you type replaces the block of text.
+
+<h2>Deleting Text</h2>
+There are several ways to delete text from the source code document.
+<ul>
+<li>Press the Del key to delete the character to the right of the insertion cursor.
+<li>Press the Backspace key to delete the character to the left of the insertion cursor.
+<li>Select a block of text and press either the Del or Backspace key or choose the Clear command on the Edit menu.
+</ul>
+
+<h2>Moving and Copying Selected Text</h2>
+
+<h3>Moving Text</h3>
+<ol>
+<li>Select the block of text you want to move.
+<li>Right click the mouse cursor anywhere inside the selection and do not release the mouse button.
+<p>This action changes the mouse cursor to the one shown here.
+<P ALIGN="CENTER"><IMG SRC="./pics/fig42.gif"></P>
+<li>Drag the mouse cursor. As you do, the insertion cursor follows.
+<li>When the insertion cursor is at the position where you want to move the text, release the mouse button.
+</ol>
+
+<h3>Copying Text</h3>
+
+<ol>
+<li>Select the block of text you want to move.
+<li>Hold down the Ctrl key
+<li>Right click the mouse cursor anywhere inside the selection and do not release the mouse button.
+<p>This action changes the mouse cursor to the one shown here.
+<P ALIGN="CENTER"><IMG SRC="./pics/fig41.gif"></P>
+<li>Drag the mouse cursor. As you do, the insertion cursor follows.
+<li>When the insertion cursor is at the position where you want to copy the text, release the mouse button.
+</ol>
+
+
+<h2>Using the Clipboard</h2>
+
+Windows applications use a system-wide scratchpad called the clipboard. Applications use the clipboard to exchange data between each other and as an interim storage location within the application. The clipboard works in the background. Users rarely see its contents except when the application itself extracts data from the clipboard. There are three clipboard operations, 
+
+<a href=#cut>Cut</a>,
+
+<a href=#copy>Copy</a>
+
+and
+
+<a href=#paste>Paste</a>,
+
+
+<a name=cut><h3>Cut</h3></a>
+The Cut operation places the text in the currently selected block into the clipboard and then deletes the selected block from the source code document. Cut requires a selected block. If there is no selection, the Cut command is disabled.
+<ol>
+<li>Select a block of text to cut to the clipboard
+<LI>Click the Cut button.</LI>
+<P><IMG SRC="./pics/cut.gif">
+<li>Or choose the Cut command on the Edit menu.
+<li>Or press Ctrl+X
+</ol>
+
+<a name=copy><h3>Copy</h3></a>
+
+The Copy operation places the text in the currently selected block into the clipboard and leaves the selected block marked. If no block is selected, Copy copies the current line of text where the insertion cursor is positioned.
+<ol>
+<li>Select a block of text to copy to the clipboard
+<LI>Click the Copy button.</LI>
+<P><IMG SRC="./pics/copy.gif">
+<li>Or choose the Copy command on the Edit menu.
+<li>Or press Ctrl+C
+</ol>
+
+
+<a name=paste><h3>Paste</h3></a>
+Paste places the current contents of the clipboard into the document at the position where the insertion cursor points or where a selected block of text is marked. If the clipboard is empty, the Paste command is disabled.
+<ol>
+<li>Position the insertion cursor at the place in the source code document to insert the text from the clipboard.
+<li>Or select a block of text to replace with the text from the clipboard
+<LI>Click the Paste button.</LI>
+<P><IMG SRC="./pics/paste.gif">
+<li>Or choose the Paste command on the Edit menu.
+<li>Or press Ctrl+V
+</ol>
+<p>
+The clipboard is available to all the applications running in the current Windows session. Consequently, you can place text from another application in the clipboard and paste it into a Quincy source code document. Similarly, you can place text from Quincy into the clipboard and paste it into another application that supports text pasting.
+<p>
+Some applications use the clipboard for graphical data. If the clipboard contains a graphical image, the clipboard looks empty to Quincy because Quincy does not work with graphics.
+
+<h2>Searching for Text</h2>
+Quincy's text search and replace operations work on the currently selected document. If you want to search multiple source code files for a match on a text argument, read about the 
+
+<a href="./tools.htm#01">Grep</a>
+
+tool.
+
+<a name=find><h3>Find</h3></a>
+To find text in the current active source code document:
+
+<ol>
+<li>Click the Find button.</li>
+
+<P><IMG SRC="./pics/find.gif">
+
+
+<li>Or choose the Find command on the Edit menu.
+<li>Or press Ctrl+F
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig45.gif"></P>
+
+<li>Type a search string in the Find What edit box control.
+<li>Check Match Whole Word Only if you want to ignore words in which your argument is partially represented
+<li>Check Match Cast if you want the search to match only if the case in the text is the same as the case in the dialog.
+<li>Select Up if you want Quincy to search backward from the current insertion cursor position or Down to search forward.
+<li>Click Find Next to begin the search.
+
+If Quincy cannot find the text you specified, this dialog displays.
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig47.gif"></P>
+
+<p>Otherwise Quincy locates the text, selects it, and scrolls the display so that the found text is in view like this:
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig48.gif"></P>
+<p>Observe that the Find dialog remains open.
+<p>
+<li>Click Find Next on the Find dialog to find the next match to the search argument in the document.
+<li>Click Cancel on the Find dialog to close the dialog.
+</ol>
+
+
+
+<h3>Replace</h3>
+You can search for a matching text string and replace it with a different one.
+
+<ol>
+<li>Choose the Replace command on the Edit menu.
+<li>Or press Ctrl+F
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig46.gif"></P>
+<p>
+<li>Enter the search and replace text strings in the Replace dialog
+<li>Select the whole word and case options just as with the Find dialog above.
+<li>Click Find Next or Replace to find the first matching text string.
+<li>If Quincy finds a matching string, click Replace to replace it.
+<li>Or click Replace All to replace all matches in the file with the replacement text.
+
+</ol>
+
+<h3>Find Next</h3>
+Find Next works only when there has been a previous find. This condition applies across Quincy source code documents during a session. Having searched one document for a match, you can switch to another document and use Find Next to find the same text.
+<ol>
+<li>Choose the Find Next command on the Edit menu.
+<li>Or press F3
+<li>Or open the Find dialog as explained above and use its Find Next button.
+</ol>
+
+
+<h2>Brace Matching</h2>
+Quincy knows about how C and C++ source code files use the brace characters, { and }, to mark statement blocks. Quincy also understands that these blocks can be nested and that some incidences of brace characters in a source code file are not statement block markers. Braces inside comments, string literals, and character literals are not markers. Quincy's brace matching feature helps you find the brace that matches a selected brace. To use this feature:
+
+<ol>
+<li>Position the insertion cursor immediately to the left of a brace character. This action enables the Match Braces command.
+<li>Execute the Match Braces command.
+	<ul>
+	<LI>Click the Match Braces button.</LI>
+<P><IMG SRC="./pics/braces.gif">
+	<li>Or choose the Match Braces command on the Edit menu.
+	<li>Or press Ctrl+{
+	<ul>
+</ol>
+<p>
+Quincy positions the insertion cursor to the left of the brace character that matches the one you selected. If you selected an open brace character, Quincy searches forward for the matching close brace character. If you selected a close brace character, Quincy searches backward for the matching open brace character.
+<p>If there is no matching brace character, Quincy displays this message:
+
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig44.gif"></P>
+
+
+<h2>Undo and Redo</h2>
+Quincy's editor includes undo and redo operations to let you correct editing mistakes.
+
+<h3>Undo</h3>
+The Undo command undoes the most recent text editing operation. The operations are stacked, so you can undo changes all the way back to where you first loaded the source code file or last saved it. If there have been no changes to the file, the Undo command is disabled. 
+<p>
+An undoable operation is anything that changes the text in the source code. If you type a line of text, that is one undoable operation. If you do a file-length find and replace, that, too is one undoable operation. Deletes are operations of their own.
+
+<p>To undo editing operations:
+<ol>
+<LI>Click the Undo button.</LI>
+<P><IMG SRC="./pics/undo.gif">
+<li>Or choose the Undo command on the Edit menu.
+<li>Or press Ctrl+Z
+</ol>
+
+<h3>Redo</h3>
+The Redo command redoes as many actions as have been undone. If you have not undone any actions or if you have redone all the stacked undone actions, the Redo command is disabled. To redo undone editing operations: 
+<ol>
+<LI>Click the Redo button.</LI>
+<P><IMG SRC="./pics/redo.gif">
+<li>Or choose the Redo command on the Edit menu.
+<li>Or press Ctrl+Y
+</ol>
+
+
+
+
+
+<p>
+<br>
+<center>
+<a href="./writing.htm">
+<--previous page</a>
+<a href="./tools.htm">
+next page--></a>
+</center>
+
+</BODY>
+</HTML>

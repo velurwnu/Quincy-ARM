@@ -1,0 +1,154 @@
+<HTML>
+<HEAD>
+<TITLE>Quincy User's Guide</TITLE>
+</HEAD>
+<BODY>
+
+<H1>Quincy Tools</H1>
+
+Quincy includes a suite of programmer's tools on the Tools menu. They include:
+
+<ul>
+<li><a href=#01>Grep</a>, a text file search tool
+<li><a href=#04>Artistic Style</a>, a code beautifier tool
+<li><a href=#02>WEdit</a>, a Windows resource editor
+<li>Quincy's editor <a href=#03>macro recorder and processor</a>
+</ul>
+
+<a name=01><h2>Grep</h2></a>
+
+Quincy's grep tool searches all the source code files in the current source file directory, usually the directory where the current active source code file is stored but also in the directory of a Quincy 
+
+<a href="./projects.htm">Project</a> if one is currently loaded. Grep searches the source code files for a match on a specified string argument.
+
+<ol>
+<li>Select Grep from Quincy's Tools menu to display the Grep dialog shown here.
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig30.gif"></p>
+
+<p>
+<li>Type the search string argument into the edit box control on the Grep dialog.
+<li>Select Match Case and/or Match Word to instruct grep to match specifically the case you entered and to select only whole words and not substrings within words.
+<li>Click OK to begin the search.
+<p>
+Quincy opens the Grep Results dialog shown here.
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig31.gif"></p>
+
+As grep finds matches in the files, it displays them in the Grep Results dialog.
+
+<li>To terminate grep before it completes the search, click the Stop tool button.
+
+<P><IMG SRC="./pics/stop.gif">
+<li>When grep is completed, you can double click any of the source code lines reported to open that source code file in Quincy's editor with the insertion cursor positioned on the selected line.
+<li>Click Close on the Grep Results dialog to close its window.
+
+</ol>
+
+<a name=04><h2>Artistic Style</h2></a>
+
+The Artistic Style code beautifier tool reformats the code in the active editor window. When you select the tool, Quincy opens the Code Beautifier dialog shown here.
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig31a.gif"></p>
+
+<ol>
+<li>Select one of the three defined styles from the Indent Style radio button set. Observe samples of the three styles in the sample code display on the right. Observe the AStyle command line at the bottom of the dialog.
+<li>Or ...
+   <ul>
+      <li>Select the Custom indent style
+      <li> modify the Artistic Style command line to beautify the code according to your preferences. 
+      <li>Click the Help button to open the
+
+Artistic Style
+
+<a target=nw href="../astyle/astyle.html">user's manual</a>.
+
+as a reference for the command line options.
+      <li>Click the Test button to see the effects of your command line in the sample code display.
+     
+
+
+      </ul>
+<li>Click OK.
+</ol>
+Note: Tab stop lengths and whether to tab with tab characters or spaces are taken from the settings programmed in the
+<a href="./options.htm#03">Editor Options</a>
+dialog.
+
+
+<a name=02><h2>Resource Editor</h2></a>
+Quincy integrates the LCC Wedit resource editor program. 
+<ol>
+<li>Choose the Resource Editor command on the Tools menu to open Wedit as shown here.
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig32.gif"></p>
+<li>Click the ? menu item to see how to get help in the use of this program.
+</ol>
+
+<a name=03><h2>Macros</h2></a>
+Quincy supports keyboard macros. You program a macro by entering keystrokes. Each time you playback the macro it is as though you entered those keystrokes again.
+<p>
+<h3>Recording a Macro</h3>
+<ol>
+<li>Position the keyboard cursor where you want to start recording the macro.
+<li>Start recording by using one of these commands:
+	<ul>
+	<li>Press Alt+R
+	</ul>
+<li>Or ...
+	<ul>
+	<li>From the Tools menu, choose the Macro submenu.
+	<li>From the Macro submenu choose Record
+	</ul>
+<p>These commands change Quincy's mouse cursor to the configuration shown here and start the recording operation.
+<P ALIGN="CENTER"><IMG SRC="./pics/fig33.gif"></p>
+
+<li>Type the keystrokes to record the macro.
+<li>When you are finished:
+
+
+<li>Stop recording by using one of these commands:
+	<ul>
+	<li>Press Alt+S
+	</ul>
+<li>Or ...
+	<ul>
+	<li>From the Tools menu, choose the Macro submenu.
+	<li>From the Macro submenu choose Stop
+	</ul>
+</ol>
+<p>These commands return Quincy's mouse cursor to its original configuration and stop the recording operation.
+
+
+
+<p>
+
+<h3>Playing Back a Macro</h3>
+<ol>
+<li>Position the keyboard cursor where you want to start macro playback to begin.
+<li>playback the macro by using one of these commands:
+	<ul>
+	<li>Press Alt+M
+	</ul>
+<li>Or ...
+	<ul>
+	<li>From the Tools menu, choose the Macro submenu.
+	<li>From the Macro submenu choose Playback
+	</ul>
+</ol>
+
+
+
+
+
+<p>
+<br>
+<center>
+<a href="./editor.htm">
+<--previous page</a>
+<a href="./building.htm">
+next page--></a>
+</center>
+
+</BODY>
+</HTML>

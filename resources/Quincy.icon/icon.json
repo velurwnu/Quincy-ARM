@@ -1,0 +1,55 @@
+{
+  "fill": {
+    "automatic-gradient": "extended-srgb:0.14902,0.38431,0.85098,1.00000"
+  },
+  "groups": [
+    {
+      "layers": [
+        {
+          "glass": false,
+          "image-name": "face.svg",
+          "name": "face"
+        },
+        {
+          "glass": true,
+          "image-name": "head.svg",
+          "name": "head"
+        }
+      ],
+      "name": "Cat",
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.5
+      },
+      "specular": true,
+      "translucency": {
+        "enabled": false,
+        "value": 0.5
+      }
+    },
+    {
+      "layers": [
+        {
+          "glass": false,
+          "image-name": "bowtie.svg",
+          "name": "bowtie"
+        }
+      ],
+      "name": "Bow tie",
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.5
+      },
+      "specular": true,
+      "translucency": {
+        "enabled": false,
+        "value": 0.5
+      }
+    }
+  ],
+  "supported-platforms": {
+    "squares": [
+      "macOS"
+    ]
+  }
+}

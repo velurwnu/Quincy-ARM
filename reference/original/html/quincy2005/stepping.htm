@@ -1,0 +1,115 @@
+<HTML>
+<HEAD>
+<TITLE>Quincy User's Guide</TITLE>
+</HEAD>
+<BODY>
+
+<H1>Stepping Through a Program</H1>
+
+<P>You can step through a program three ways: by single-stepping, by stepping over a function call, and by stepping to the cursor location.</P>
+
+<H2>Single-Stepping</H2>
+
+<P>Single-stepping executes the program one source code line at a time. To single-step:</P>
+
+<OL>
+
+<LI>Click the Step tool button.</LI>
+<P><IMG SRC="./pics/step.gif">
+<LI>Or press F7.</LI>
+<LI>Or choose the Step command on the Debug menu.</LI>
+
+</OL>
+
+<P>If Quincy has not already started the program, it does so first by opening the 
+
+<a href="./running.htm#01">console window</a>
+
+. Then Quincy executes instructions to the next line of executable source code, stopping there, and displaying a green arrow in the margin of the next line to be executed in the editor window as shown here.</P>
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig06.gif"></P>
+
+<P>Each successive step executes the marked line of source code. If the source code line calls a function in another source code file in your 
+
+<a href="./projects.htm">project</a>
+
+, Quincy opens that source code file as Quincy's active document window.
+If the source code line is a statement that reads keystrokes from the console, you must select the 
+
+<a href="./running.htm#01">console window</a>
+
+and make the data entry that the program is expecting before proceeding. If the statement writes to the console, the display shows in the 
+
+<a href="./running.htm#01">console window</a>
+after you make the step. When the last statement of the program has been stepped, select the console window and enter that last keystroke to close the console window.</P>
+
+<H2>Stepping Over a Function Call</H2>
+
+<P>Stepping over a function call executes the function call but does not step into its source code. Use this command when you do not want to step through a function in your program--perhaps you are satisfied with how that function is working and you do not want to spend time stepping through its source code.</P>
+
+<p>To step over a function call:</P>
+
+<OL>
+
+<LI>Click the Step Over tool button.</LI>
+<P><IMG SRC="./pics/stepover.gif">
+<LI>Or press F8.</LI>
+<LI>Or choose the Step Over command on the Debug menu.</LI></OL>
+
+<P>Quincy executes the function call and stops on the next statement following the function call. If, however, the function contains a   
+
+<a href="./breaking.htm">breakpoint</a>
+
+, Quincy stops at the breakpoint instead. Similarly, if the function requires console input, you must switch to the 
+
+<a href="./running.htm#01">console window</a>
+
+and enter the required data before proceeding.
+
+</P>
+
+<H2>Stepping to the Cursor Location</H2>
+
+<P>Stepping to the cursor location runs the program and breaks at the source code statement where the keyboard cursor is positioned. Use this procedure to set a temporary breakpoint when the source code line is in view.
+
+<P>To step to the cursor location:</P>
+
+<OL>
+
+<LI>Position the cursor on the line you want to step to.</LI>
+<LI>Click the Step To Cursor tool button.</LI>
+<P><IMG SRC="./pics/stepto.gif">
+<LI>Or press F10.</LI>
+<LI>Or choose the Step To Cursor command on the Debug menu.</LI></OL>
+
+<P>Quincy runs the program from its current state and stops when the program arrives at the selected line of code. If, however, the function contains a 
+
+<a href="./breaking.htm">breakpoint</a>
+
+, Quincy stops at the breakpoint instead.
+
+<H2>Stepping Out of a Function</H2>
+
+<P>Stepping out of a function runs the program to the end of the current function and then breaks at the line following the call to the function.
+
+<P>To step out of a function:</P>
+<OL>
+
+<LI>Click the Step Out tool button.</LI>
+<P><IMG SRC="./pics/stepout.gif">
+<LI>Or press F10.</LI>
+<LI>Or choose the Step Out of Function command on the Debug menu.</LI></OL>
+
+<P>Quincy runs the program from its current state and stops when the program arrives at the line of code following the call to the function. If, however, the function contains a <a href="./breaking.htm">breakpoint</a>, Quincy stops at the breakpoint instead.</P>
+
+<p>
+<br>
+<center>
+<a href="./debugging.htm">
+<--previous page</a>
+<a href="./breaking.htm">
+next page--></a>
+</center>
+
+</BODY>
+</HTML>

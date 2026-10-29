@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- The red bow tie peeking out from under the chin. -->
+  <defs>
+    <linearGradient id="silk" gradientUnits="userSpaceOnUse" x1="0" y1="22" x2="0" y2="27">
+      <stop offset="0" stop-color="#FF4A44"/>
+      <stop offset="1" stop-color="#C3161F"/>
+    </linearGradient>
+  </defs>
+  <g transform="matrix(24 0 0 24 152 186)" stroke="#1E1F29" stroke-width="0.6" stroke-linejoin="round">
+    <path fill="url(#silk)" d="M14.4 23.6 C13 22.9 11.8 22.3 10.9 22.1 C10.4 22 10.2 22.3 10.2 22.8 L10.2 26.2 C10.2 26.8 10.6 27 11.1 26.8 C12.2 26.4 13.3 25.9 14.4 25.3 Z"/>
+    <path fill="url(#silk)" d="M15.6 23.6 C17 22.9 18.2 22.3 19.1 22.1 C19.6 22 19.8 22.3 19.8 22.8 L19.8 26.2 C19.8 26.8 19.4 27 18.9 26.8 C17.8 26.4 16.7 25.9 15.6 25.3 Z"/>
+    <rect x="14" y="23.2" width="2" height="2.5" rx="0.55" fill="#D21E27"/>
+  </g>
+</svg>

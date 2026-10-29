@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Quincy's head. Drawn in "pixel units" of the original 32x32 cat:
+       x = 152 + 24u, y = 186 + 24v. -->
+  <defs>
+    <radialGradient id="fur" gradientUnits="userSpaceOnUse" cx="12" cy="9" r="19">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.55" stop-color="#FAFAFC"/>
+      <stop offset="0.82" stop-color="#DDE0E7"/>
+      <stop offset="1" stop-color="#B4B9C6"/>
+    </radialGradient>
+    <linearGradient id="earL" gradientUnits="userSpaceOnUse" x1="9.6" y1="3.4" x2="5.8" y2="5.4">
+      <stop offset="0" stop-color="#D6D8DF"/>
+      <stop offset="1" stop-color="#8C909C"/>
+    </linearGradient>
+    <linearGradient id="earR" gradientUnits="userSpaceOnUse" x1="20.4" y1="3.4" x2="24.2" y2="5.4">
+      <stop offset="0" stop-color="#D6D8DF"/>
+      <stop offset="1" stop-color="#8C909C"/>
+    </linearGradient>
+  </defs>
+  <g transform="matrix(24 0 0 24 152 186)" stroke-linejoin="round" stroke-linecap="round">
+    <path fill="url(#fur)" stroke="#1E1F29" stroke-width="0.75"
+          d="M5.2 0 C7.5 1.6 9.8 3.4 11.6 4.4 C13.6 3.7 16.4 3.7 18.4 4.4
+             C20.2 3.4 22.5 1.6 24.8 0 C25.2 2.5 25 5.5 25.6 7.6
+             C27.2 9 28 11.2 28 13.6 C28 17 25.8 19.8 23 21.6
+             C20.6 23.1 17.6 23.6 15 23.6 C12.4 23.6 9.4 23.1 7 21.6
+             C4.2 19.8 2 17 2 13.6 C2 11.2 2.8 9 4.4 7.6
+             C5 5.5 4.8 2.5 5.2 0 Z"/>
+    <path fill="url(#earL)" d="M6 1.5 C7.6 2.6 9.2 3.8 10.4 4.7 C8.8 5.1 7.3 5.9 6.2 7.1 C5.9 5.2 5.8 3.3 6 1.5 Z"/>
+    <path fill="url(#earR)" d="M24 1.5 C22.4 2.6 20.8 3.8 19.6 4.7 C21.2 5.1 22.7 5.9 23.8 7.1 C24.1 5.2 24.2 3.3 24 1.5 Z"/>
+  </g>
+</svg>

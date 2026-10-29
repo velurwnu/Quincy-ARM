@@ -1,0 +1,141 @@
+<HTML>
+<HEAD>
+<TITLE>Quincy User's Guide</TITLE>
+</HEAD>
+<BODY>
+
+<H1>Working with Projects</H1>
+
+<P>A program that uses more than one translation unit must be built from a Quincy Project, which is a file that lists the source code files and library files that the compiler and linker use to build the executable program. </P>
+
+<P>You also use a Project to build a library file, which is a collection of compiled modules that can be linked into a program.</P>
+
+<H2>Setting Up a Project</H2>
+
+<P>To establish a project:</P>
+
+<OL>
+
+<LI>Click the New tool button.</LI>
+<P><IMG SRC="./pics/new.gif">
+<LI>Or choose the New command on the File menu.</LI>
+<P>Quincy opens the New dialog shown here.</P>
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig12.gif"></P>
+
+
+<LI>Select the Project File entry in the New dialog.</LI>
+<LI>Click OK.</LI>
+<P>Quincy opens the Project Properties dialog shown here.</P>
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig18.gif"></P>
+
+<LI>Enter the name of the target in the Target field. The target is either an executable program or an object library. Enter the file name with no file extension.
+<LI>Enter the path where the project file and its source code files will be located.
+<LI>Enter the working directory where the project will read and write its data files when you run or debug it from within Quincy.
+<LI>Select the radio button that identifies the kind of application the project builds.
+<li>Click OK.</LI>
+</OL>
+<p>(You can modify all the project properties except for its path by choosing the Properties command on the Project menu when the project file is open in Quincy.)
+<p>
+A project is a document, and Quincy displays it alongside of the source code documents in the MDI window. Here is an empty project document.
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig19.gif"></P>
+
+
+<H2>Setting the Project's Options</H2>
+
+<ol>
+<LI>Ensure that Quincy's options are compatible with the target that the project builds. See 
+
+<a href ="./options.htm">Setting Options</a>.
+
+Library files are usually built with debugging information disabled. Executable files that include library files must have the paths to those files programmed into Quincy's options.</LI>
+
+<LI>Click the Save tool button.</LI>
+<P><IMG SRC="./pics/save.gif">
+
+<LI>Or press Ctrl+S.</LI>
+<LI>Or choose the Save command on the File menu.</LI>
+</ol>
+
+<P>If the Project file was saved earlier, Quincy writes the current version over the old one. If the Project file is a new one, Quincy opens the Save As dialog box shown above.</P>
+
+
+<H2>Adding Files To a Project</H2>
+
+<P>A Project file consists of a list of source code files and, optionally, library files. The source code files must be in the same folder with the Project file. The library files can be elsewhere.</P>
+
+<P>To add a file to a Project.</P>
+<OL>
+
+<LI>Select the Project file as the active window.</LI>
+<LI>If the Project already has files, select the file in front of which you want to insert the new files. If you want to append files to the list, select no files in the Project window. (To deselect a file, click anywhere in the empty part of the window.)</LI>
+<P>The order of the files is important when you use libraries that refer to each other's object files. The linker makes only one pass. If you have circular references, you might need to list a library file more than once in the Project file.</P>
+<LI>Press the Ins key.</LI>
+<LI>Or choose the Insert File(s) command on the Project menu.</LI>
+<P>Quincy opens the Insert File(s) dialog shown here.</P>
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig20.gif"></P>
+
+<P>Select one or more files from the list. If you are adding C or C++ source files, they must be in the same folder that contains the Project file. If you are selecting a library file, which has the extension .A, you can get it from any folder as long as Quincy's options have been set to permit the linker to find the library.</P>
+<LI>Click the Open button to add the selected files to the Project.</LI>
+
+</OL>
+
+<p>Here is a project file with some source code files added. Quincy has the source code files open behind the project file, too.
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig20a.gif"></P>
+
+<H2>Deleting Files From a Project</H2>
+
+<P>To delete files from a Project:</P>
+<OL>
+
+<LI>Select the file(s) to be deleted in the Project window.</LI>
+<LI>Choose the Delete File(s) command on the Project Window.</LI>
+<LI>Or press the Del key.</LI>
+<P>Quincy asks if you really want to delete the files.</P>
+<LI>Click Yes.</LI>
+</OL>
+
+<H2>Building a Project</H2>
+
+<H3>Conditional Make of a Project's Target</h3>
+<OL>
+
+<LI>Select the Project file or one of its source code files.</LI>
+<LI>Click the Build tool button.</LI>
+<P><IMG SRC="./pics/build.gif">
+<LI>Or Choose the Build command on the Project menu.</LI></OL>
+
+<P>This procedure is a conditional "make" operation, which means that Quincy recompiles the source code files that have changed since the previous build. During the build operation, Quincy displays its status in the Build dialog shown here.</P>
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig21.gif"></P>
+
+<p>If any of the compile operations has errors, the Build dialog displays those errors as explained in 
+
+<a href="./building.htm#01">Unsuccessful Build</a>.
+
+You can double click an error message to open the source code file in the editor and position the insertion cursor on the line of source code that produced the error.
+
+<H3>Rebuild All Parts of a Project</H3>
+<OL>
+
+<LI>Click the Build All tool button.</LI>
+<P><IMG SRC="./pics/buildall.gif">
+<LI>Or select the Rebuild All command on the Project menu.</LI></OL>
+
+<P>This procedure recompiles all the source code files listed as part of the project and then links the executable target or builds the library target if there were no errors.</P>
+
+<p>
+<br>
+<center>
+<a href="./building.htm">
+<--previous page</a>
+<a href="./printing.htm">
+next page--></a>
+</center>
+
+</BODY>
+</HTML>

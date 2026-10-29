@@ -1,0 +1,743 @@
+######## toc
+![](./pics/quincy.gif)_**Quincy 2005**_   
+
+
+[Introduction](intro.htm)  
+
+
+**Quincy 2005 Additions**
+
+  1. [New in Quincy 2005 ](NewInQuincy.htm)
+
+  2. [Using the Graphics Libraries](NewInQuincy.htm#UsingLibraries)
+
+  3. [Using Other 3rd Party Libraries](NewInQuincy.htm#OtherLibraries)
+
+
+
+
+**Quincy 2002 User's Guide  
+(update scheduled for Quincy 2005 version 2)  
+**
+
+  1. [Installing and Uninstalling Quincy](install.htm)
+  2. [Starting Quincy](starting.htm)
+  3. [Setting Options](options.htm)
+  4. [Example Programs](examples.htm)
+  5. [Running a Program](running.htm)
+  6. [Debugging a Program](debugging.htm)
+[ ](debugging.htm) [
+     1.   
+](debugging.htm)[Stepping Through a Program](stepping.htm)
+     2. [Breakpoints](breaking.htm)
+     3. [Examining and Modifying Variables](examine.htm)
+     4. [Watching Variables](watch.htm)
+     5. [Stopping a Program](stopping.htm)
+  7. [Writing New Programs](writing.htm)
+  8. [Editing Source Code](editor.htm)
+  9. [Quincy's Tools](tools.htm)
+  10. [Building a Program](building.htm)
+  11. [Working with Projects](projects.htm)
+  12. [Printing the Source Code](printing.htm)
+
+
+
+######## intro
+# Introduction
+
+Quincy is an "integrated development environment" (IDE) for C or C++.
+
+It combines a programmer's editor, compiler, and debugger into one Windows 98/NT/2000/XP application. Quincy uses the [MinGW](http://www.mingw.org) port of the [GCC](http://gcc.gnu.org) compiler system.
+
+With Quincy you can develop Console applications, Win32 GUI applications, DLLs, or static libraries.   
+Quincy 2005 adds [WinBGIm graphics](http://codecutter.net/tools/winbgim) and [FLTK](http://fltk.org/) GUI applications,    
+The included [koolplot](http://codecutter.net/tools/koolplot) 2D plotting library is of special value to scientists and engineers.  
+  
+Quincy is specially designed for learners of C or C++. It is extremely easy to install and use. It can produce text-based programs, or stunning graphical applications using simple pre-installed graphics libraries.  
+  
+Quincy 2005 is public domain software. It can be downloaded from <http://quincy.codecutter.org>
+
+* * *
+
+### Quincy History:
+
+Quincy 2005 is an update of Al Steven's Quincy 2002, still available on the web  
+at: <http://www.alstevens.com/quincy.html> Al produced Quincy to accompany a C++ tutorial book and as a project for the  
+C Programming column of [Dr. Dobb's Journal.](http://www.ddj.com/)
+
+### Al Stevens explains what the name Quincy means:
+
+"Quincy is named after my daughter Wendy's cat. As a child in the 1970s, Wendy was a  
+fan of the TV shows, The Odd Couple and Quincy, both of which starred Jack Klugman,  
+who played Oscar Madison and a medical examiner named Quincy in those shows.   
+When Wendy brought home a tiny white kitten with blue eyes, she didn't know its sex.   
+Choosing from Jack, Oscar, and Quincy, she decided that Quincy was the most   
+gender-unspecific.  Quincy lived many years and was a beloved pet to Wendy as a child, my wife and I when  
+Wendy went to college, and then to Wendy and her family after Wendy married and had  
+children of her own. Oh, yeah, Quincy was a female."  
+---  
+  
+ 
+
+###  
+
+######## starting
+# Starting Quincy
+
+There are two ways to start Quincy: 
+
+  1. Open the Quincy submenu on the Start/Programs menu. 
+  2. Click the Quincy command. 
+
+
+Or: 
+
+  1. Double-click the Quincy icon that the Setup program optionally added to your desktop. 
+
+
+Quincy always loads the source code files from your most recent Quincy session. The following screen shot shows the Quincy application window with a source code file loaded and ready to go. (The first time you start Quincy, there will be no source code document loaded.) 
+
+![](./pics/fig03.gif)
+
+## Exiting Quincy
+
+To exit from Quincy:
+
+  1. Choose the Exit command on the File menu. 
+  2. Or click the X button in the upper right corner of the application title bar. 
+  3. Or press Alt+F4. 
+
+
+If any documents have been changed and not saved, a dialog box asks if you want to save them before exiting. The dialog box asks the question once for each modified document. 
+
+  
+[ <\--previous page](./install.htm) [ next page-->](./options.htm)
+
+######## writing
+# Writing New Programs
+
+You write a new program by building a source code file, setting options for the program, saving the program to disk, and then compiling the program. First you must create a new file.
+
+## Creating a Source Code File
+
+To create a source code file from scratch:
+
+  1. Click the New tool button.
+
+![](./pics/new.gif)
+  2. Or choose the New command on the File menu.
+
+Quincy opens the New dialog shown here.
+
+![](./pics/fig12.gif)
+
+  3. Select the kind of source code file you are building. A C++ file will be saved with the .cpp file extension and will be compiled by the C++ compiler. A C file will be saved with the .c file extension and will be compiled by the C compiler. A Header file will be saved with the .h extension, signifying a header file you include in your C and C++ source code files.
+
+Note: Project files are discussed in [Working with Projects](./projects.htm)
+
+  4. Click OK.
+
+Quincy creates an empty text file with the name Textn, where n is the next available number for Quincy to assign to a text file. You will probably want to change the name to something more meaningful when you save the file. This file has not been saved to disk yet. You cannot compile the program until you have saved the source code file.
+
+  5. Use the text editing commands discussed in [Editing Source Code](./editor.htm) to write your program.
+
+
+
+If you scroll the list in the New dialog, you will see that Quincy supports editing three other kinds of files as shown here. 
+
+![](./pics/fig12a.gif)
+
+Resource source files and DLL export lists are related to Windows programming, and Windows programmers know what they are and how to use them. 
+
+ASCII text files are just that. Quincy will save them with the extension .txt. Saving a Source Code File
+
+Before you can compile and test your program, you must save it to disk. Before you can compile a program that includes a header file in a source code file, you must save the header file to disk.
+
+To save the source code file:
+
+  1. Click the Save tool button.
+
+![](./pics/save.gif)
+  2. Or press Ctrl+S.
+  3. Or choose the Save command on the File menu.
+
+If the source code file was already saved earlier, Quincy writes the current version over the old one. If the source code file is a new one that you have not yet saved, Quincy opens the Save As dialog box shown here.
+
+![](./pics/fig13.gif)
+
+  4. Enter the source code file name in the File Name field. You can omit the extension. Quincy uses the extension selected in the Save As Type dropdown listbox.
+  5. Ensure that the Save As dialog box is positioned at the Windows folder where you want to save the source code file. If not, use the dialog box to navigate to the correct folder.
+  6. Click the Save button.
+
+
+
+To save all the source code files loaded into the Quincy IDE:
+
+  1. Click the Save All tool button.
+
+![](./pics/saveall.gif)
+  2. Or choose the Save All command on the File menu.
+
+
+
+NOTE: Remember when you save header files to put them in the same folder as source code files that include them with the _#include "file.h"_ notation. If you save the header files in a different folder, the source code files that include them must use the _#include <file.h>_ notation, and Quincy's options must be set to tell Quincy where to find such header files as explained in [Setting Options](./options.htm)
+
+## Using Save As
+
+You can save an existing file that was saved earlier and give it a different name by choosing the Save As command on the File menu to open the Save As dialog box. Follow the procedure described in Saving a Source Code File beginning with step 4. The original file is not changed by this procedure.
+
+## Working With Multiple Source Code Files.
+
+Quincy is a Windows _Multiple Document Interface_ (MDI) application, which means that you can open and work with more than one source code file at a time as shown here.
+
+![](./pics/fig14.gif)
+
+If your program involves more than one translation unit--that is, a combination of multiple C files, C++ files, and libraries--you must organize the program into a Project before you can link the translation units and run the program. This procedure is discussed in [Working with Projects](./projects.htm). 
+
+  
+[ <\--previous page](./stopping.htm) [ next page-->](./editor.htm)
+
+######## editor
+# Editing Source Code
+
+Quincy's editor is a typical text editor similar to those found in most software development environments. If you know how to enter text into Notepad, you'll know how to use Quincy. There are [editor options](./options.htm#03) you can set to change how Quincy displays text as you enter it. You can change the colors of the text display, how tabs are expanded, and whether the editor autoindents as you type. 
+
+## Entering Text
+
+Enter text by typing it. Quincy does not support word wrapping; the editor window scrolls horizontally if you type past the right margin. If you have syntax highlighting selected in the [editor options](./options.htm#03), the text changes color as the editor parses those text elements--comments, key words, and string literals--that should be highlighted as shown here. 
+
+![](./pics/fig40.gif)
+
+## The Insertion Cursor
+
+Observe the vertical black bar in the first column position on line 12 in the illustration above. That is the text insertion cursor. Although this illustration is static, when Quincy is running, the insertion cursor blinks so you can find it when you need to. When you type, the characters you type go where the cursor is positioned, and the cursor moves to the next position. 
+
+You can move the insertion cursor several ways: 
+
+  1. Use the Home, End, Page Up, Page Down, and arrow keys. 
+  2. Use those keys with the Ctrl key depressed. 
+  3. Click in the editor window with the mouse. 
+
+
+The small pane in Quincy's status bar displays the current line and column position of the insertion cursor. 
+
+It is possible for the insertion cursor to be out of sight. If you scroll the document window horizontally or vertically with the scroll bars and the mouse, you can put the insertion cursor off screen. But it is still there. If you start typing when the insertion cursor is out of sight, Quincy changes the text's scrolling position so that the line where the insertion cursor is positioned is in view. 
+
+Quincy's editor does not have Insert/Overwrite modes of text entry like other editors do. Quincy is always in Insert mode, which is how editing source code is typically done. 
+
+## Selecting Text
+
+Many editing operations are affected by whether a block of text is selected. Selected text is identified by a video highlight around the text. A selected block can span several lines of text as shown here. 
+
+![](./pics/fig43.gif)
+
+You can select a block of text several ways: 
+
+  1. With the keyboard: 
+     * Move the selection cursor to one end of the block 
+     * Hold down the shift key 
+     * Move the selection cursor with the keyboard as described above. 
+  2. By dragging the mouse: 
+     * Move the mouse to one end of the block 
+     * Hold down the left mouse button 
+     * Drag the moust to the other end of the block 
+  3. Double-click a word to select only that word. 
+  4. By performing a Find operation 
+  5. To select all the text in the document press Ctrl+A or choose the Select All command on the Edit menu. 
+
+
+## Unselecting Text
+
+Almost any keyboard or mouse operation that does not affect a block of text will unselect it. Moving the insertion cursor, clicking elsewhere in the editor window, for example will unmark the text. 
+
+## Typing Into Selected Text
+
+If you type a character when a block of text is selected, the character you type replaces the block of text. 
+
+## Deleting Text
+
+There are several ways to delete text from the source code document. 
+
+  * Press the Del key to delete the character to the right of the insertion cursor. 
+  * Press the Backspace key to delete the character to the left of the insertion cursor. 
+  * Select a block of text and press either the Del or Backspace key or choose the Clear command on the Edit menu. 
+
+
+## Moving and Copying Selected Text
+
+### Moving Text
+
+  1. Select the block of text you want to move. 
+  2. Right click the mouse cursor anywhere inside the selection and do not release the mouse button. 
+
+This action changes the mouse cursor to the one shown here. 
+
+![](./pics/fig42.gif)
+
+  3. Drag the mouse cursor. As you do, the insertion cursor follows. 
+  4. When the insertion cursor is at the position where you want to move the text, release the mouse button. 
+
+
+### Copying Text
+
+  1. Select the block of text you want to move. 
+  2. Hold down the Ctrl key 
+  3. Right click the mouse cursor anywhere inside the selection and do not release the mouse button. 
+
+This action changes the mouse cursor to the one shown here. 
+
+![](./pics/fig41.gif)
+
+  4. Drag the mouse cursor. As you do, the insertion cursor follows. 
+  5. When the insertion cursor is at the position where you want to copy the text, release the mouse button. 
+
+
+## Using the Clipboard
+
+Windows applications use a system-wide scratchpad called the clipboard. Applications use the clipboard to exchange data between each other and as an interim storage location within the application. The clipboard works in the background. Users rarely see its contents except when the application itself extracts data from the clipboard. There are three clipboard operations, Cut, Copy and Paste, Cut The Cut operation places the text in the currently selected block into the clipboard and then deletes the selected block from the source code document. Cut requires a selected block. If there is no selection, the Cut command is disabled. 
+
+  1. Select a block of text to cut to the clipboard 
+  2. Click the Cut button.
+
+![](./pics/cut.gif)
+  3. Or choose the Cut command on the Edit menu. 
+  4. Or press Ctrl+X 
+Copy The Copy operation places the text in the currently selected block into the clipboard and leaves the selected block marked. If no block is selected, Copy copies the current line of text where the insertion cursor is positioned. 
+
+  1. Select a block of text to copy to the clipboard 
+  2. Click the Copy button.
+
+![](./pics/copy.gif)
+  3. Or choose the Copy command on the Edit menu. 
+  4. Or press Ctrl+C 
+Paste Paste places the current contents of the clipboard into the document at the position where the insertion cursor points or where a selected block of text is marked. If the clipboard is empty, the Paste command is disabled. 
+
+  1. Position the insertion cursor at the place in the source code document to insert the text from the clipboard. 
+  2. Or select a block of text to replace with the text from the clipboard 
+  3. Click the Paste button.
+
+![](./pics/paste.gif)
+  4. Or choose the Paste command on the Edit menu. 
+  5. Or press Ctrl+V 
+
+
+The clipboard is available to all the applications running in the current Windows session. Consequently, you can place text from another application in the clipboard and paste it into a Quincy source code document. Similarly, you can place text from Quincy into the clipboard and paste it into another application that supports text pasting. 
+
+Some applications use the clipboard for graphical data. If the clipboard contains a graphical image, the clipboard looks empty to Quincy because Quincy does not work with graphics. 
+
+## Searching for Text
+
+Quincy's text search and replace operations work on the currently selected document. If you want to search multiple source code files for a match on a text argument, read about the [Grep](./tools.htm#01) tool. Find To find text in the current active source code document: 
+
+  1. Click the Find button.
+
+![](./pics/find.gif)
+  2. Or choose the Find command on the Edit menu. 
+  3. Or press Ctrl+F 
+
+![](./pics/fig45.gif)
+
+  4. Type a search string in the Find What edit box control. 
+  5. Check Match Whole Word Only if you want to ignore words in which your argument is partially represented 
+  6. Check Match Cast if you want the search to match only if the case in the text is the same as the case in the dialog. 
+  7. Select Up if you want Quincy to search backward from the current insertion cursor position or Down to search forward. 
+  8. Click Find Next to begin the search. If Quincy cannot find the text you specified, this dialog displays. 
+
+![](./pics/fig47.gif)
+
+Otherwise Quincy locates the text, selects it, and scrolls the display so that the found text is in view like this: 
+
+![](./pics/fig48.gif)
+
+Observe that the Find dialog remains open. 
+
+  9. Click Find Next on the Find dialog to find the next match to the search argument in the document. 
+  10. Click Cancel on the Find dialog to close the dialog. 
+
+
+### Replace
+
+You can search for a matching text string and replace it with a different one. 
+
+  1. Choose the Replace command on the Edit menu. 
+  2. Or press Ctrl+F 
+
+![](./pics/fig46.gif)
+
+  3. Enter the search and replace text strings in the Replace dialog 
+  4. Select the whole word and case options just as with the Find dialog above. 
+  5. Click Find Next or Replace to find the first matching text string. 
+  6. If Quincy finds a matching string, click Replace to replace it. 
+  7. Or click Replace All to replace all matches in the file with the replacement text. 
+
+
+### Find Next
+
+Find Next works only when there has been a previous find. This condition applies across Quincy source code documents during a session. Having searched one document for a match, you can switch to another document and use Find Next to find the same text. 
+
+  1. Choose the Find Next command on the Edit menu. 
+  2. Or press F3 
+  3. Or open the Find dialog as explained above and use its Find Next button. 
+
+
+## Brace Matching
+
+Quincy knows about how C and C++ source code files use the brace characters, { and }, to mark statement blocks. Quincy also understands that these blocks can be nested and that some incidences of brace characters in a source code file are not statement block markers. Braces inside comments, string literals, and character literals are not markers. Quincy's brace matching feature helps you find the brace that matches a selected brace. To use this feature: 
+
+  1. Position the insertion cursor immediately to the left of a brace character. This action enables the Match Braces command. 
+  2. Execute the Match Braces command. 
+     * Click the Match Braces button.
+
+![](./pics/braces.gif)
+     * Or choose the Match Braces command on the Edit menu. 
+     * Or press Ctrl+{ 
+
+Quincy positions the insertion cursor to the left of the brace character that matches the one you selected. If you selected an open brace character, Quincy searches forward for the matching close brace character. If you selected a close brace character, Quincy searches backward for the matching open brace character. 
+
+If there is no matching brace character, Quincy displays this message: 
+
+![](./pics/fig44.gif)
+
+## Undo and Redo
+
+Quincy's editor includes undo and redo operations to let you correct editing mistakes. 
+
+### Undo
+
+The Undo command undoes the most recent text editing operation. The operations are stacked, so you can undo changes all the way back to where you first loaded the source code file or last saved it. If there have been no changes to the file, the Undo command is disabled. 
+
+An undoable operation is anything that changes the text in the source code. If you type a line of text, that is one undoable operation. If you do a file-length find and replace, that, too is one undoable operation. Deletes are operations of their own. 
+
+To undo editing operations: 
+       1. Click the Undo button.
+
+![](./pics/undo.gif)
+       2. Or choose the Undo command on the Edit menu. 
+       3. Or press Ctrl+Z 
+
+### Redo
+
+The Redo command redoes as many actions as have been undone. If you have not undone any actions or if you have redone all the stacked undone actions, the Redo command is disabled. To redo undone editing operations: 
+       1. Click the Redo button.
+
+![](./pics/redo.gif)
+       2. Or choose the Redo command on the Edit menu. 
+       3. Or press Ctrl+Y 
+
+  
+[ <\--previous page](./writing.htm) [ next page-->](./tools.htm)
+
+######## projects
+# Working with Projects
+
+A program that uses more than one translation unit must be built from a Quincy Project, which is a file that lists the source code files and library files that the compiler and linker use to build the executable program. 
+
+You also use a Project to build a library file, which is a collection of compiled modules that can be linked into a program.
+
+## Setting Up a Project
+
+To establish a project:
+
+  1. Click the New tool button.
+
+![](./pics/new.gif)
+  2. Or choose the New command on the File menu.
+
+Quincy opens the New dialog shown here.
+
+![](./pics/fig12.gif)
+
+  3. Select the Project File entry in the New dialog.
+  4. Click OK.
+
+Quincy opens the Project Properties dialog shown here.
+
+![](./pics/fig18.gif)
+
+  5. Enter the name of the target in the Target field. The target is either an executable program or an object library. Enter the file name with no file extension. 
+  6. Enter the path where the project file and its source code files will be located. 
+  7. Enter the working directory where the project will read and write its data files when you run or debug it from within Quincy. 
+  8. Select the radio button that identifies the kind of application the project builds. 
+  9. Click OK.
+
+
+
+(You can modify all the project properties except for its path by choosing the Properties command on the Project menu when the project file is open in Quincy.) 
+
+A project is a document, and Quincy displays it alongside of the source code documents in the MDI window. Here is an empty project document. 
+
+![](./pics/fig19.gif)
+
+## Setting the Project's Options
+
+  1. Ensure that Quincy's options are compatible with the target that the project builds. See [Setting Options](./options.htm). Library files are usually built with debugging information disabled. Executable files that include library files must have the paths to those files programmed into Quincy's options.
+  2. Click the Save tool button.
+
+![](./pics/save.gif)
+  3. Or press Ctrl+S.
+  4. Or choose the Save command on the File menu.
+
+
+
+If the Project file was saved earlier, Quincy writes the current version over the old one. If the Project file is a new one, Quincy opens the Save As dialog box shown above.
+
+## Adding Files To a Project
+
+A Project file consists of a list of source code files and, optionally, library files. The source code files must be in the same folder with the Project file. The library files can be elsewhere.
+
+To add a file to a Project.
+
+  1. Select the Project file as the active window.
+  2. If the Project already has files, select the file in front of which you want to insert the new files. If you want to append files to the list, select no files in the Project window. (To deselect a file, click anywhere in the empty part of the window.)
+
+The order of the files is important when you use libraries that refer to each other's object files. The linker makes only one pass. If you have circular references, you might need to list a library file more than once in the Project file.
+
+  3. Press the Ins key.
+  4. Or choose the Insert File(s) command on the Project menu.
+
+Quincy opens the Insert File(s) dialog shown here.
+
+![](./pics/fig20.gif)
+
+Select one or more files from the list. If you are adding C or C++ source files, they must be in the same folder that contains the Project file. If you are selecting a library file, which has the extension .A, you can get it from any folder as long as Quincy's options have been set to permit the linker to find the library.
+
+  5. Click the Open button to add the selected files to the Project.
+
+
+
+Here is a project file with some source code files added. Quincy has the source code files open behind the project file, too. 
+
+![](./pics/fig20a.gif)
+
+## Deleting Files From a Project
+
+To delete files from a Project:
+
+  1. Select the file(s) to be deleted in the Project window.
+  2. Choose the Delete File(s) command on the Project Window.
+  3. Or press the Del key.
+
+Quincy asks if you really want to delete the files.
+
+  4. Click Yes.
+
+
+
+## Building a Project
+
+### Conditional Make of a Project's Target
+
+  1. Select the Project file or one of its source code files.
+  2. Click the Build tool button.
+
+![](./pics/build.gif)
+  3. Or Choose the Build command on the Project menu.
+
+
+
+This procedure is a conditional "make" operation, which means that Quincy recompiles the source code files that have changed since the previous build. During the build operation, Quincy displays its status in the Build dialog shown here.
+
+![](./pics/fig21.gif)
+
+If any of the compile operations has errors, the Build dialog displays those errors as explained in [Unsuccessful Build](./building.htm#01). You can double click an error message to open the source code file in the editor and position the insertion cursor on the line of source code that produced the error. 
+
+### Rebuild All Parts of a Project
+
+  1. Click the Build All tool button.
+
+![](./pics/buildall.gif)
+  2. Or select the Rebuild All command on the Project menu.
+
+
+
+This procedure recompiles all the source code files listed as part of the project and then links the executable target or builds the library target if there were no errors.
+
+  
+[ <\--previous page](./building.htm) [ next page-->](./printing.htm)
+
+######## building
+# Building a Program
+
+Quincy works with programs built from a single source code file or from a Quincy Project ([Working with Projects](projects.htm)) that includes a number of source code and library files. 
+
+This discussion is about building a program from a single source code file. The source code file must represent a compete program with a main function and no calls to functions outside the one source code file other than calls to functions supported by one of the libraries provided by the compiler. Here is a typical one-file program. 
+
+![](./pics/fig15z.gif)
+
+## Setting Options
+
+There are several options for how the program is to be compiled and how Quincy is to run it from within the IDE. You set these options prior to compiling and running the program. Quincy remembers the option settings from session to session.
+
+[Setting Options](./options.htm) explains how to set options in Quincy. If you are working with a Quincy Project as described in [Working with Projects](./projects.htm) , the options settings are stored in the Project file. If you are using Quincy with the tutorial examples as described in [Example Programs](examples.htm) , the tutorial command files set the options that each example uses even when no Project file is involved.
+
+## Building the Program
+
+To build the program:
+
+  1. Select the program's source code file in the editor if the editor includes multiple source code files.
+  2. Click the Build tool button.
+
+![](./pics/build.gif)
+  3. Or press F6.
+  4. Or choose the Build command on the Project menu.
+
+
+
+Quincy launches the compiler programs to preprocess, compile, assemble, and link the source code into an executable program. The Build dialog, shown here, displays the progress of the build process.
+
+![](./pics/fig16.gif)
+
+The messages in the Build window include the commands that Quincy uses to run the compiler program. In this case you are interested in the last line displayed, which tells you that the program was successfully built. You can close the Build dialog and proceed with running and debugging the program as explained in [Running a Program](./running.htm) and [Debugging a Program](./debugging.htm). .
+
+## Interrupting a Build
+
+You can interrupt a build at any time by following this procedure:
+
+  1. Click the Stop tool button.
+
+![](./pics/stopbuild.gif)
+  2. Or choose the Stop command on the Project menu.
+
+
+
+Quincy displays the dialog shown here.
+
+![](./pics/fig16a.gif)
+
+Unsuccessful Build
+
+If the build involves errors or warnings, Quincy displays them in the Build dialog shown here. 
+
+![](./pics/fig17.gif)
+
+If the dialog lists only warning messages, which are clearly labeled as such, the build completed and the program can be executed. You should strive, however, to write programs that compile cleanly--with no warnings.
+
+If the dialog lists error messages, the build did not complete successfully.
+
+When you double-click any message in the dialog, Quincy makes the editor the active window and moves the cursor to the offending source code line.
+
+## Compiling a Source Code File
+
+You can compile a source code file without building an executable program. Sometimes you do this just to see if the source code file has any errors. To compile a source code file:
+
+  1. Choose the Compile command on the Project menu.
+  2. Or press F5.
+
+
+
+Quincy compiles the source code file and does not attempt to build an executable program. You can review errors and warnings as described above.
+
+  
+[ <\--previous page](./tools.htm) [ next page-->](./projects.htm)
+
+######## running
+# Running a Program
+
+To run a program that is loaded into Quincy's editor: 
+
+  1. Click the Run tool button.
+
+![](./pics/run.gif)
+  2. Or Press F9.
+  3. Or choose the Run command on the Debug menu.
+  4. If the program is out of date--if the source code file has been changed so that it is newer than the executable--a dialog asks first if you want to compile the program. If you respond by clicking Yes, Quincy launches the compiler and runs the program only when a successful compile has completed.
+
+Console Window Before running the program, Quincy creates a console window (unless the program is built from a Quincy project that specifies a GUI target), which serves as standard console input and output for the program. You read text from and type text into that window as if you were running the program from a DOS command line. The following screen shot shows a console window with a program that has run to completion. ![](./pics/fig05.gif) _Quincy always displays the message that says "Press Enter to return to Quincy..." in the console window to give you time to read the output before Quincy closes the console. Press the Enter key to close the window and return to the Quincy IDE. Stopping a Program To stop a program in progress before it has run to completion.
+
+  1. Click the Stop tool button.
+![](./pics/stop.gif)
+  2. Or select the Stop command on the Debug menu.
+  3. Or press Ctrl+C when the program is waiting for the keyboard at the [console window](./running.htm#01) . This option terminates Quincy along with the running program and is unpredictable.
+  4. Or click the X icon at the right end of the console window's title bar. Windows displays a dialog box asking if you really want to do that. This option usually terminates Quincy along with the running program. It appears to lock up Windows for a few seconds while it figures out that it is supposed to close the console window.
+
+It is best not to use the procedures listed as options 3 and 4 but to use the Stop command or Stop tool button instead.   
+[ <\--previous page](./examples.htm) [ next page-->](./debugging.htm)
+
+######## options
+# Setting Options
+
+There are several options for how the program is to be compiled and how Quincy is to run it from within the IDE. You set these options prior to compiling and running the program. Quincy remembers the option settings from session to session.
+
+If you are working with a Quincy Project as described in [Working with Projects](./projects.htm), the options settings are stored in the Project file when you save it. If you change project-related options, Quincy will prompt you to save the Project file when you close it. The next time you load the project, the settings are restored to what you set them to here.
+
+If you are using Quincy with the tutorial examples as described in [Example Programs](./examples.htm), the tutorial command files set the options that each example uses. You can override these options durint the session, but the tutorial command files are not affected when you do. The next time you open the tutorial, its programmed options are restored.
+
+To set Quincy's options choose the Options menu command. Quincy opens the Options dialog, a tabbed dialog with tabs for Build options, Run options, and Editor options. 
+
+Build Options These are the options that control how Quincy builds a program, including how the compiler processes the source code, what kind of code is generated, and where the compiler looks for header files and libraries. 
+
+![](./pics/fig15.gif)
+
+  1. Select the Build Tab in the Options dialog as shown above. 
+  2. Check the Debugging Information Added checkbox if you want to use the IDE to step through the program or set breakpoints in the source code display when you debug the program.
+  3. Check the Exception Handling Enabled checkbox if your program uses C++ exception handling (try/throw/catch).
+  4. Check the Runtime Type Information Enabled checkbox if your program uses the dynamic_cast or typeid operators. Any source code file that uses these operators should include the Standard C++ **< typeinfo>** header file.
+  5. Check the String ANSI/ISO Compliance checkbox if you want the compiler to test your code for compliance to Standard C and C++. 
+  6. Enter any preprocessor macros that the program needs in the Define field. Whatever you type here will be treated as if you put it at the front of the source code as the arguments to a #define preprocessor directive with this exception: to define a global symbol with a value, use an equals sign (=) as shown here:
+
+VERSION=2.5
+
+The example just shown compiles as if the source code file included this statement:
+
+#define VERSION 2.5
+
+If you need more than one macro, separate them in the Define field with semicolons as shown here:
+
+NDEBUG;VERSION=2.5
+
+  7. Enter paths to folders where the preprocessor can search for header files specified with the #include <file.h> directive. Separate the paths with semicolons. You can use relative paths or fully qualified paths. The preprocessor searches the paths in the order you enter them here. If the header file is not in one of these paths, then the preprocessor searches the compiler's INCLUDE subdirectories.
+  8. Enter paths to folders where the linker can search for library files that a Project file includes. (See "Quincy Projects") Separate the paths with semicolons. You can use relative paths or fully qualified paths. The linker searches the paths in the order you enter them here. If a library file is not in one of these paths, then the linker searches the compiler's LIB subdirectories.
+  9. Select the level of optimization the compiler should use. This option is a value from 0 to 3. If you selected Debugging information, this value defaults to zero. 
+  10. Enter the path where the gcc compiler is installed. If you leave this field blank, Quincy looks for the compiler in the /mingw subdirectory under the directory where Quincy is installed. 
+  11. Enter the path where the gdb debugger is installed. If you leave this field blank, Quincy looks for the debugger in the /gdb subdirectory under the directory where Quincy is installed. If no debugger is there, Quincy looks for one in the /bin subdirectory under the directory where the compiler is installed. 
+  12. Enter any additional command line arguments that Quincy should pass to the gcc compiler program. For example, adding -v causes Quincy to display the compiler's verbose information in the Build dialog. 
+For the Includes, Libraries, and Compiler fields you can click Browse button to open the Browse for Folder dialog shown here. 
+
+![](./pics/fig15a.gif)
+
+Browse to the folder you want to add to the list in the Option dialog's Build tab, and click OK. Run Options
+
+  1. Select the Run tab on the Options dialog as shown here. 
+
+![](./pics/fig15b.gif)
+
+  2. For console applications, set the Command Line options according to how you wish to run the program from within Quincy. 
+     * Choose No Options if the program does not process command line parameters 
+     * Click Prompt Each Time... if you want Quincy to prompt for command line parameters every time you run the program 
+     * Click Use This and enter the command line options in the accompanying text box control to always pass the same command line parameters to the program when Quincy runs it. 
+  3. Enter the path to the runtime working subdirectory. Quincy will set that subdirectory as the default one before running the program. The program will read and write data files with ambiguous path specifications relative to this path. 
+  4. Leave the path blank to have the program use the subdirectory of its source code files as the runtime working directory. 
+Editor Options
+
+  1. Select the Editor tab on the Options dialog as shown here. 
+
+![](./pics/fig15c.gif)
+
+As you change the editor's settings, the simulated source code display in the Editor tabbed dialog reflects your changes. 
+
+  2. Select the number of character positions for each tab stop by changing the scroll button control. 
+  3. Select the maximum number of edit action undos that Quincy stores. 
+  4. Enable or disable the autoindent feature by clicking the Autoindent check box control. With autoindent disabled, Quincy always returns the insertion cursor to the left margin when you press Enter. 
+  5. Select whether the editor inserts space characters or tab characters into the text when you press the Tab key or use the autoindent feature. 
+  6. Enable or disable syntax color highlighting. 
+  7. With syntax color highlighting: 
+     * click one of the color bars next to the text feature you want to highlight with color. This action opens the Color dialog shown here. 
+
+![](./pics/fig15d.gif)
+
+     * Click the color you want to use for the text feature selected. 
+     * Click OK. 
+  8. To revert to Quincy's default color scheme, click Restore Defaults. 
+  9. Change the font size by clicking the + button to increase the font size and the - button to decrease the font size. 
+  10. Click the Bold button to toggle the font between normal width and boldface. 
+
+
+## Recording Your Option Settings
+
+  1. When you have made all the options changes you want to make, click OK on the Options dialog. 
+  2. Or, to nullify any changes you might have made, Click Cancel on the Options dialog. 
+
+
+  
+[ <\--previous page](./starting.htm) [ next page-->](./examples.htm)
+

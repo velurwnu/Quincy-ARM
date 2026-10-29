@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+<H1>Building a Program</H1>
+
+<P>Quincy works with programs built from a single source code file or from a Quincy Project 
+
+(<a href="projects.htm">Working with Projects</a>)
+that includes a number of source code and library files. 
+
+<p>This discussion is about building a program from a single source code file. The source code file must represent a compete program with a main function and no calls to functions outside the one source code file other than calls to functions supported by one of the libraries provided by the compiler. Here is a typical one-file program.
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig15z.gif"></P>
+
+
+<H2>Setting Options</H2>
+
+<P>There are several options for how the program is to be compiled and how Quincy is to run it from within the IDE. You set these options prior to compiling and running the program. Quincy remembers the option settings from session to session.</P>
+
+<a href="./options.htm">Setting Options</a> 
+
+explains how to set options in Quincy.
+
+If you are working with a Quincy Project as described in
+
+<a href="./projects.htm">Working with Projects</a>
+
+, the options settings are stored in the Project file.
+
+If you are using Quincy with the tutorial examples as described in 
+
+<a href="examples.htm">Example Programs</a>
+
+, the tutorial command files set the options that each example uses even when no Project file is involved.</P>
+
+
+<H2>Building the Program</H2>
+<P>To build the program:</P>
+<OL>
+
+<LI>Select the program's source code file in the editor if the editor includes multiple source code files.</LI>
+<LI>Click the Build tool button.</LI>
+<P><IMG SRC="./pics/build.gif">
+<LI>Or press F6.</LI>
+<LI>Or choose the Build command on the Project menu.</LI></OL>
+
+<P>Quincy launches the compiler programs to preprocess, compile, assemble, and link the source code into an executable program. The Build dialog, shown here, displays the progress of the build process.</P>
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig16.gif"></P>
+
+The messages in the Build window include the commands that Quincy uses to run the compiler program. In this case you are interested in the last line displayed, which tells you that the program was successfully built.
+
+You can close the Build dialog and proceed with running and debugging the program as explained in
+
+<a href = "./running.htm">Running a Program</a>
+
+and
+
+<a href = "./debugging.htm">Debugging a Program</a>.
+
+
+
+
+.</P>
+
+<H2>Interrupting a Build</H2>
+<P>You can interrupt a build at any time by following this procedure:</P>
+<OL>
+
+<LI>Click the Stop tool button.</LI>
+<P><IMG SRC="./pics/stopbuild.gif">
+<LI>Or choose the Stop command on the Project menu.</LI></OL>
+
+<P>Quincy displays the dialog shown here.</P>
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig16a.gif"></P>
+
+<a name=01><H2>Unsuccessful Build</H2></a>
+
+<P>If the build involves errors or warnings, Quincy displays them in the Build dialog shown here. </P>
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig17.gif"></P>
+
+<P>If the dialog lists only warning messages, which are clearly labeled as such, the build completed and the program can be executed. You should strive, however, to write programs that compile cleanly--with no warnings.</P>
+
+<P>If the dialog lists error messages, the build did not complete successfully.</P>
+<P>When you double-click any message in the dialog, Quincy makes the editor the active window and moves the cursor to the offending source code line.</P>
+
+<H2>Compiling a Source Code File</H2>
+
+<P>You can compile a source code file without building an executable program. Sometimes you do this just to see if the source code file has any errors. To compile a source code file:</P>
+<OL>
+
+<LI>Choose the Compile command on the Project menu.</LI>
+<LI>Or press F5.</LI></OL>
+
+<P>Quincy compiles the source code file and does not attempt to build an executable program. You can review errors and warnings as described above.</P>
+
+<p>
+<br>
+<center>
+<a href="./tools.htm">
+<--previous page</a>
+<a href="./projects.htm">
+next page--></a>
+</center>
+
+
+</BODY>
+</HTML>

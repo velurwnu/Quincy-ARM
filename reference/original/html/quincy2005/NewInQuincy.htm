@@ -1,0 +1,86 @@
+<HTML>
+<HEAD>
+<TITLE>Quincy User's Guide</TITLE>
+<style type="text/css">
+<!--
+.style1 {
+	color: #800000;
+	font-style: italic;
+}
+.style3 {color: #2A5F55}
+.style4 {font-size: smaller}
+-->
+</style>
+</HEAD>
+<BODY>
+
+<H1>New in Quincy 2005 </H1>
+Quincy 2005 continues in the tradition of Al Stevens' Quincy 2002.<br>
+<br>
+Like its predecessor,  it is simple to use and to install. It comes with all the programming tools needed to write and compile C or C++ programs.
+Differences and new features are described below: 
+<H2>Installing</H2>
+<p>The Quincy 2005 Windows installer is available for download on the Quincy 2005 web page <a href="http://quincy.codecutter.org">http://quincy.codecutter.org</a><br>
+  <em class="style1">To install,  run the installer and follow very basic  screen instructions.</em><br>
+  <br>
+This will install all the components (including help, program examples and graphics libraries). No extra downloads are necessary.</p>
+<p class="style1">Quincy 2005 is not  distributed on CD. </p>
+<p><strong>Quincy 2002 legacy: </strong><br>
+  The compiler and some programming examples were originally distributed on a CD that came with a book of Al Stevens (now probably out of stock).  Quincy 2005 no longer supports that CD. If you have that book and CD and want to run the CD examples, please install the version of Quincy on the CD, or download it from Al's Quincy page: <a href="options.htm">      http://alstevens.com/quincy.html</a>
+</p>
+<P>The installation instructions  given in the <em>Quincy 2002</em> part of the guide were for the CD installation. They do not apply to Quincy 2005. The program examples installed with Quincy 2005 are not the examples that came with the book and CD.<br>
+<H3 align="left">New Components in Quincy 2005 </H3>
+
+<UL>
+<LI><strong>MingW:</strong> &nbsp;<br>
+  Quincy 2005 includes a more recent version of the MingW (GCC) compiler and tools. The current version numbers are given in the &quot;Version History&quot; link on the Quincy web page. The GCC version currently running with Quincy can also be seen on the [Help]-&gt;[About Quincy 2005] screen of Quincy as here: <img src="../pics/GCCversion.gif" alt="about screen" width="468" height="88" align="top"></LI>
+<LI><strong>Graphic Libraries:</strong> <br>
+C and C++ do not support graphics as part of the language. Quincy supports 3rd party graphics libraries of various levels of sophistication and complexity. These allow programmers to produce application with windows, menus, and graphics. <br>
+  They are:<br>
+    <em><u>WinBGIm</u></em>: An emulation under Windows 32 of the ancient and famous Borland Graphics Interface, with the addition of mouse control. This is the simplest graphics package offered. It supports graphics, but not GUIs (no menus, buttons, textfields scrollbars...). <u><em>Great for simple games or emulations, though. </em></u><br>
+      <br>      
+    <u><em>    FLTK:</em></u> The &quot;Fast and Light Toolkit&quot; produces efficient (fast execution,  small executable files) graphics and Graphical User Interfaces. It is more powerful and complex than <em>WinBGIm</em>, but is still simple to use, compared to other available toolkits.<br>
+    FLTK is a portable toolkit. This is an important advantage: Graphical applications developed under Quincy can be ported to other operating systems (i.e. Linux or Mac) with very little effort, simply by re-compiling with the same FLTK libraries available on these systems.<br>
+  FLTK incorporates FLUID, available under the &quot;Tools&quot; button of Quincy. The FLUID GUI builder is a tool for Rapid Application Development (RAD). With it you can quickly design the windows and menus of your application. FLUID also generates the associated C++ source code.<br>
+  <br>
+  <em><u>Win32 API:</u></em> This is the native Windows &quot;Applications Programmer Interface&quot;. It was already available under previous versions of Quincy. It is fast, powerful, integrates natively with Windows, and is without controversy the hardest to learn of the three libraries on offer.<br>
+  <br>
+  <em><u>Koolplot:</u></em> This simple graph plotting library is built on top of WinBGIm. It allow programmers to produce 2D graphs extremely simply. It is very practical for scientists or engineers writing C or C++ programs with Quincy.<br>
+  <br>
+  </LI>
+<LI><strong>Help and Example Pages:<br>
+</strong>C and C++ language and library references are essential to the programmer and have been added to Quincy 2005.<br>
+  More commented example programs and tutorials are progressively added with each new version of Quincy. <br>
+</LI>
+</UL>
+
+<H3 align="left"><a name="UsingLibraries"></a> Using the Provided Graphic Libraries in  Quincy 2005</H3>
+<p>To develop software using a graphics library supported by Quincy, a project file must be created using the menu entry: [File]-&gt;[New]-&gt;[Project]. This will open a <em>Project Properties</em> page: </p>
+<p align="center"><img src="../pics/ProjectProperties.gif" alt="Project Properties Screen" width="402" height="275" align="top"></p>
+<p align="left">Select the type of program you want to build.<br>
+If a graphics type is selected, the associated graphics libraries will be linked automatically to the program by Quincy. </p>
+<p align="left">A graphical program that displays in the usual windows may also come with a supplementary &quot;console&quot; (the white-on-black &quot;DOS&quot; screen) that can be used for standard input/output, or for displaying error messages. If that is what you want, you must select the &quot;With Console&quot; tick-box by clicking on it. </p>
+<p align="left">A FLTK application is special in that the standard FLTK libraries may need to be supplemented by extra libraries if your program uses images, or forms, or extra functions available in OpenGL. These tick-boxes become available when &quot;FLTK application&quot; is selected. </p>
+<p align="left"><img src="../pics/fltkLibraries.gif" alt="FLTK libraries tick-boxes" width="428" height="79"><br>
+</p>
+<H3 align="left"> <a name="OtherLibraries"></a>Installing and Using Other 3rd Party Libraries in  Quincy 2005</H3>
+<p><strong>Installing:</strong><br>
+You may import other 3rd party libraries to be used in Quincy. To get these to work in Quincy, you must install the 3rd party header files (with <em>.h</em> extension)  into the <em>...\quincy\include</em> folder, and you must install the 3rd party libraries (with <em>.a</em> extension) into the <em>...\quincy\lib</em> folder. </p>
+<p>To ensure that 3rd party libraries you have installed as above are linked against a program that uses them, you must tell Quincy to flag them to the linker. In order to do this, you must indicate the library to use in the [Tools]-&gt;[Options]-&gt;[Build] screen as a linker option.</p>
+<p><strong>Example: </strong>In the  &quot;Options&quot; screen below, the extra library &quot;libconio.a&quot; (which already exists in the <em>quincy/lib&quot;</em> folder) is requested by the flag <em>-l conio. </em>The conio2 functions stored in &quot;libconio.a&quot;  will be linked to the program currently under development when the programmer asks Quincy to build that program.  </p>
+<p><img src="../pics/LinkerOptions.gif" alt="Linker Options Example" width="370" height="406"><br>  
+    <span class="style3"><br>  
+  <span class="style4">Note that the general rule is to request a library called <em>libXXX.a </em>with the flag <em>-l XXX</em>. Leave out the &quot;lib&quot; prefix, and the <em>.a</em> extension from the name. </span></span></p>
+<p>The &quot;libconio.a&quot; library file is part of the 3rd party &quot;conio2&quot; library: a modern replacement for the old Borland-style &quot;conio&quot; library. It is distributed on <em>sourceforge ( <a href="http://conio.sourceforge.net">http://conio.sourceforge.net</a> </em>). Conio2 is pre-installed as a 3rd party library in Quincy. It is described in the Programmer's help, and examples of use are given in the Quincy example programs. <br>
+</p>
+<p align="left">&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp; </p>
+<H3><br>
+</H3>
+
+<p>
+
+</BODY>
+</HTML>

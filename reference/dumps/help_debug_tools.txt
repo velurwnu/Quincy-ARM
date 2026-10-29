@@ -1,0 +1,300 @@
+######## debugging
+# Debugging a Program
+Quincy's IDE integrates the GNU debugger named GDB into Quincy's environment, specifically a modified version of the cygwin port of GDB. The modification permits Quincy to run GDB to debug a console application on Windows 95/98/ME platforms despite a bug in those platforms that gets in the way. If you crave more details, read the C Programming Column in the December, 2002 issue of Dr. Dobb's Journal. 
+Since Quincy uses the MinGW compiler port, Quincy includes an option to use the GDB that is bundled with MinGW GCC. The debugger selection option is explained in Setting Options You should use this option only if you are working on non-console applications or if your development platform is Windows NT/2000/XP. This version of the debugger is not as current as the other and might give you trouble with complex C++ programs. 
+## Compile for Debugging
+To debug a program, it must be compiled and linked with debugging information included. Select this option as explained in Setting Options. This option makes an executable program binary file much larger than it needs to be once debugging is complete. You should build the program without this option before you distribute it to users. You should thoroughly test the distributable version before distributing it, too. 
+## The Debugger Console Window
+Quincy's View menu includes an option to view the Debugger Console window shown here: 
+![](./pics/fig05a.gif)
+This window displays the dialog between Quincy and the GDB command line debugger program. It is of interest only if you understand how to operate GDB from the command line and care to see how Quincy emulates a human user. It is also helpful in debugging Quincy itself. Eventually this window might not be available on distributed versions of Quincy. 
+## Debugging Procedures
+These are the procedures involved in debugging a program. 
+  * Stepping Through a Program
+  * Breakpoints
+  * Examining and Modifying Variables
+  * Watching Variables
+  * Stopping a Program 
+<\--previous page next page-->
+######## stepping
+# Stepping Through a Program
+You can step through a program three ways: by single-stepping, by stepping over a function call, and by stepping to the cursor location.
+## Single-Stepping
+Single-stepping executes the program one source code line at a time. To single-step:
+  1. Click the Step tool button.
+![](./pics/step.gif)
+  2. Or press F7.
+  3. Or choose the Step command on the Debug menu.
+If Quincy has not already started the program, it does so first by opening the console window . Then Quincy executes instructions to the next line of executable source code, stopping there, and displaying a green arrow in the margin of the next line to be executed in the editor window as shown here.
+![](./pics/fig06.gif)
+Each successive step executes the marked line of source code. If the source code line calls a function in another source code file in your project , Quincy opens that source code file as Quincy's active document window. If the source code line is a statement that reads keystrokes from the console, you must select the console window and make the data entry that the program is expecting before proceeding. If the statement writes to the console, the display shows in the console window after you make the step. When the last statement of the program has been stepped, select the console window and enter that last keystroke to close the console window.
+## Stepping Over a Function Call
+Stepping over a function call executes the function call but does not step into its source code. Use this command when you do not want to step through a function in your program--perhaps you are satisfied with how that function is working and you do not want to spend time stepping through its source code.
+To step over a function call:
+  1. Click the Step Over tool button.
+![](./pics/stepover.gif)
+  2. Or press F8.
+  3. Or choose the Step Over command on the Debug menu.
+Quincy executes the function call and stops on the next statement following the function call. If, however, the function contains a breakpoint , Quincy stops at the breakpoint instead. Similarly, if the function requires console input, you must switch to the console window and enter the required data before proceeding. 
+## Stepping to the Cursor Location
+Stepping to the cursor location runs the program and breaks at the source code statement where the keyboard cursor is positioned. Use this procedure to set a temporary breakpoint when the source code line is in view. 
+To step to the cursor location:
+  1. Position the cursor on the line you want to step to.
+  2. Click the Step To Cursor tool button.
+![](./pics/stepto.gif)
+  3. Or press F10.
+  4. Or choose the Step To Cursor command on the Debug menu.
+Quincy runs the program from its current state and stops when the program arrives at the selected line of code. If, however, the function contains a breakpoint , Quincy stops at the breakpoint instead. 
+## Stepping Out of a Function
+Stepping out of a function runs the program to the end of the current function and then breaks at the line following the call to the function. 
+To step out of a function:
+  1. Click the Step Out tool button.
+![](./pics/stepout.gif)
+  2. Or press F10.
+  3. Or choose the Step Out of Function command on the Debug menu.
+Quincy runs the program from its current state and stops when the program arrives at the line of code following the call to the function. If, however, the function contains a breakpoint, Quincy stops at the breakpoint instead.
+<\--previous page next page-->
+######## breaking
+# Breakpoints
+Breakpoints are lines of code where you want to stop during a debug run to observe the progress of the program. This operation is similar to stepping to the cursor location except that you can set multiple breakpoints, and they persist throughout the program's execution until you reset them.
+## Setting a Breakpoint:
+  1. Double click in the left margin of the line where you want a breakpoint. 
+  2. Or... 
+     1. Put the keyboard cursor on the line of code where you want a breakpoint.
+     2. Click the Breakpoint tool button. 
+![](./pics/break.gif)
+     3. Or press F2. 
+     4. Or choose the Breakpoint command on the Debug menu.  
+Here is a breakpoint set in a program.
+![](./pics/fig07.gif)
+The hand icon in the left margin of the source code line indicates that a breakpoint is set. You can set multiple breakpoints in a program across several source code files.
+## When a Breakpoint Occurs
+When you run the program, Quincy interrupts execution when the program arrives at a source code line that has a breakpoint. The green arrow icon displays on top of the breakpoint hand icon in the left margin as shown here. 
+![](./pics/fig07a.gif)
+You can examine and modify variables, set watch variables, and then step or continue running from the breakpoint statement.
+## Clearing a Breakpoint:
+  1. Double click in the left margin of the line where you want a breakpoint. 
+  2. Or... 
+     1. Put the keyboard cursor on the line of code where the breakpoint is.
+     2. Click the Breakpoint tool button. 
+![](./pics/breakoff.gif)
+     3. Or press F2. 
+     4. Or choose the Breakpoint command on the Debug menu.
+## Clearing All Breakpoints:
+  1. Click the Clear Breakpoints tool button. 
+![](./pics/clearbreak.gif)
+  2. Or choose the Clear Breakpoints command on the Debug menu. 
+<\--previous page next page-->
+######## examine
+# Examining and Modifying Variables
+When a program is executing but the IDE has control--at a breakpoint or after a step--you can examine the values in variables that are in scope and modify their contents. 
+## Examine a Variable
+  1. Click the Examine tool button.
+![](./pics/examine.gif)
+  2. Or press Ctrl+E.
+  3. Or choose the Examine command on the Debug menu.
+Any of these actions opens the Examine dialog shown here. 
+![](./pics/fig08.gif)
+  4. Type the name of a variable that is currently in scope into the Variable field.
+You can enter any C/C++ expression that can be evaluated in the current scope of the program. If an expression has side effects, they come into play as soon as the examine is evaluated when you click OK. you 
+  5. Click OK. The dialog box displays the type and current value of the variable. If the variable is not in scope, the dialog displays the ?? token.
+![](./pics/fig08a.gif)
+## Modify the Variable's Value
+  1. Tab to the Change field.
+  2. Enter a new value from the keyboard.
+(You can change the value only if the expression you entered is a C/C++ _lvalue_ in the current scope of the program.) 
+  3. Click OK. 
+The new value is displayed, and when you continue running the program, the variable has the new value stored in it.
+![](./pics/fig08b.gif)
+To close the Examine window and return to the IDE, click Close.
+<\--previous page next page-->
+######## watch
+# Watching Variables
+You can watch the values of variables while stepping through a program by opening Quincy's Watch Window and programming variables you want to watch. 
+## Opening the Watch Window
+To open the Watch window:
+  1. Click the Watch tool button.
+![](./pics/watch.gif)
+  2. Or press Ctrl+W.
+  3. Or choose the Watch command on the Debug menu.
+Any of these actions opens the Watch Window shown here.
+![](./pics/fig09.gif)
+## Adding a Watch Variable
+To add a watch variable:
+  1. Click the Add Watch button.
+This action opens the Add Watch dialog shown here.
+![](./pics/fig10.gif)
+  2. Enter the identifier of the variable you want to watch in the Variable field.
+  3. Click OK.
+The variable name is added to the Watch Window's list. As you step through the program, the Watch Window displays the variable's current value as shown here.
+![](./pics/fig11.gif)
+You can enter an expression to watch, too. If the expression cannot be evaluated in the current scope of the program, the watch value displays as ??. Otherwise the value returned by the expression displays as shown here. 
+If an expression has side effects, they come into play when the watch is evaluated each time you step through the program or when breakpoints occur. 
+![](./pics/fig11a.gif)
+## Deleting a Watch Variable
+To delete a watch variable from the Watch Window:
+  1. Select the variable you want to delete by clicking it.
+  2. Click the Delete Watch button.
+## Closing the Watch Window
+To close the Watch Window:
+  1. Click the Close command on the Watch Window.
+Closing the Watch Window does not delete any of the programmed watch variables.
+## Reopening the Watch Window
+You can reopen the Watch Window at any time as described in Opening the Watch Window or by choosing the Watch Window command on the View menu.
+<\--previous page next page-->
+######## stopping
+# Stopping a Program
+To stop a program you are debugging before it has run to completion, click the Stop tool button. 
+![](./pics/stop.gif)
+When a program being debugged has run to completion, its console window closes and the debugger terminates. 
+<\--previous page next page-->
+######## tools
+# Quincy Tools
+Quincy includes a suite of programmer's tools on the Tools menu. They include: 
+  * Grep, a text file search tool 
+  * Artistic Style, a code beautifier tool 
+  * WEdit, a Windows resource editor 
+  * Quincy's editor macro recorder and processor 
+## Grep
+Quincy's grep tool searches all the source code files in the current source file directory, usually the directory where the current active source code file is stored but also in the directory of a Quincy Project if one is currently loaded. Grep searches the source code files for a match on a specified string argument. 
+  1. Select Grep from Quincy's Tools menu to display the Grep dialog shown here. 
+![](./pics/fig30.gif)
+  2. Type the search string argument into the edit box control on the Grep dialog. 
+  3. Select Match Case and/or Match Word to instruct grep to match specifically the case you entered and to select only whole words and not substrings within words. 
+  4. Click OK to begin the search. 
+Quincy opens the Grep Results dialog shown here. 
+![](./pics/fig31.gif)
+As grep finds matches in the files, it displays them in the Grep Results dialog. 
+  5. To terminate grep before it completes the search, click the Stop tool button. 
+![](./pics/stop.gif)
+  6. When grep is completed, you can double click any of the source code lines reported to open that source code file in Quincy's editor with the insertion cursor positioned on the selected line. 
+  7. Click Close on the Grep Results dialog to close its window. 
+## Artistic Style
+The Artistic Style code beautifier tool reformats the code in the active editor window. When you select the tool, Quincy opens the Code Beautifier dialog shown here. 
+![](./pics/fig31a.gif)
+  1. Select one of the three defined styles from the Indent Style radio button set. Observe samples of the three styles in the sample code display on the right. Observe the AStyle command line at the bottom of the dialog. 
+  2. Or ... 
+     * Select the Custom indent style 
+     * modify the Artistic Style command line to beautify the code according to your preferences. 
+     * Click the Help button to open the Artistic Style user's manual. as a reference for the command line options. 
+     * Click the Test button to see the effects of your command line in the sample code display. 
+  3. Click OK. 
+Note: Tab stop lengths and whether to tab with tab characters or spaces are taken from the settings programmed in the Editor Options dialog. 
+## Resource Editor
+Quincy integrates the LCC Wedit resource editor program. 
+  1. Choose the Resource Editor command on the Tools menu to open Wedit as shown here. 
+![](./pics/fig32.gif)
+  2. Click the ? menu item to see how to get help in the use of this program. 
+## Macros
+Quincy supports keyboard macros. You program a macro by entering keystrokes. Each time you playback the macro it is as though you entered those keystrokes again. 
+### Recording a Macro
+  1. Position the keyboard cursor where you want to start recording the macro. 
+  2. Start recording by using one of these commands: 
+     * Press Alt+R 
+  3. Or ... 
+     * From the Tools menu, choose the Macro submenu. 
+     * From the Macro submenu choose Record 
+These commands change Quincy's mouse cursor to the configuration shown here and start the recording operation. 
+![](./pics/fig33.gif)
+  4. Type the keystrokes to record the macro. 
+  5. When you are finished: 
+  6. Stop recording by using one of these commands: 
+     * Press Alt+S 
+  7. Or ... 
+     * From the Tools menu, choose the Macro submenu. 
+     * From the Macro submenu choose Stop  
+These commands return Quincy's mouse cursor to its original configuration and stop the recording operation. 
+### Playing Back a Macro
+  1. Position the keyboard cursor where you want to start macro playback to begin. 
+  2. playback the macro by using one of these commands: 
+     * Press Alt+M 
+  3. Or ... 
+     * From the Tools menu, choose the Macro submenu. 
+     * From the Macro submenu choose Playback  
+<\--previous page next page-->
+######## examples
+# Example Programs
+Quincy is integrated with the example programs in the book. To proceed through the examples as you read the book, do one of the following: 
+  1. Click the Example Programs button on the toolbar.
+(If the example programs are not installed on your PC, the Example Programs button is not visible.) 
+![](./pics/example.gif)
+  2. Or press F4.
+  3. Or choose the Example Programs command on the Help menu.
+Any of these actions opens the Example Programs dialog shown here.
+![](./pics/fig04.gif)
+To load a specific example into Quincy:
+  1. Open the Example Programs dialog as just explained.
+  2. Click the + icon next to a book icon to open the chapter that contains the example you want to view.
+  3. Double-click the page icon that corresponds to the example.
+Quincy loads the source code files associated with that example into its document windows. Some examples involve the Watch Window. Using the Example Programs dialog to launch such examples sets watch variables and opens the Watch Window when you load the examples. See "Watching Variables" later in this document. This approach also sets Quincy's build options to match the example. See Setting Options later in this document.
+<\--previous page next page-->
+######## printing
+# Printing the Source Code
+## Prepare to Print
+  1. Load the source code file into Quincy's editor.
+  2. Select the source code file as the active window.
+  3. Choose the Print Setup command on the File menu to select and setup your printer. This command opens the Print Setup dialog shown here. 
+![](./pics/fig25.gif)
+  4. If you want line numbers printed with the source code listing, check the Print Line Numbers checkbox on the Print Setup dialog. 
+  5. click OK when your printer is setup correctly. 
+## Print Preview
+  1. Click the Print Preview button.
+![](./pics/printpreview.gif)
+  2. Or choose the Print Preview command on the File menu to display an image of the printed page as shown here. 
+![](./pics/fig26.gif)
+  3. Click anywhere in the displayed page to zoom in. 
+  4. Click several times for more zooms and, eventually, to zoom out to the original display. 
+  5. Click the Close button when you are finished previewing the printed document. 
+## Print the Source Code Listing
+     1. Click the Print tool button.
+![](./pics/print.gif)
+     2. Or choose the Print command on the File menu.
+These commands open the Print dialog shown here. 
+![](./pics/fig27.gif)
+     3. You get another chance to select a printer and whether you want line numbers printed. 
+     4. Click OK to print the source code listing. 
+<\--previous page
+######## NewInQuincy
+# New in Quincy 2005 
+Quincy 2005 continues in the tradition of Al Stevens' Quincy 2002.  
+Like its predecessor, it is simple to use and to install. It comes with all the programming tools needed to write and compile C or C++ programs. Differences and new features are described below: 
+## Installing
+The Quincy 2005 Windows installer is available for download on the Quincy 2005 web page http://quincy.codecutter.org  
+_To install, run the installer and follow very basic screen instructions._  
+This will install all the components (including help, program examples and graphics libraries). No extra downloads are necessary.
+Quincy 2005 is not distributed on CD. 
+**Quincy 2002 legacy:**  
+The compiler and some programming examples were originally distributed on a CD that came with a book of Al Stevens (now probably out of stock). Quincy 2005 no longer supports that CD. If you have that book and CD and want to run the CD examples, please install the version of Quincy on the CD, or download it from Al's Quincy page:  http://alstevens.com/quincy.html
+The installation instructions given in the _Quincy 2002_ part of the guide were for the CD installation. They do not apply to Quincy 2005. The program examples installed with Quincy 2005 are not the examples that came with the book and CD.  
+### New Components in Quincy 2005 
+  * **MingW:**    
+Quincy 2005 includes a more recent version of the MingW (GCC) compiler and tools. The current version numbers are given in the "Version History" link on the Quincy web page. The GCC version currently running with Quincy can also be seen on the [Help]->[About Quincy 2005] screen of Quincy as here: ![about screen](../pics/GCCversion.gif)
+  * **Graphic Libraries:**   
+C and C++ do not support graphics as part of the language. Quincy supports 3rd party graphics libraries of various levels of sophistication and complexity. These allow programmers to produce application with windows, menus, and graphics.   
+They are:  
+__WinBGIm__ : An emulation under Windows 32 of the ancient and famous Borland Graphics Interface, with the addition of mouse control. This is the simplest graphics package offered. It supports graphics, but not GUIs (no menus, buttons, textfields scrollbars...). __Great for simple games or emulations, though.__  
+__FLTK:__ The "Fast and Light Toolkit" produces efficient (fast execution, small executable files) graphics and Graphical User Interfaces. It is more powerful and complex than _WinBGIm_ , but is still simple to use, compared to other available toolkits.  
+FLTK is a portable toolkit. This is an important advantage: Graphical applications developed under Quincy can be ported to other operating systems (i.e. Linux or Mac) with very little effort, simply by re-compiling with the same FLTK libraries available on these systems.  
+FLTK incorporates FLUID, available under the "Tools" button of Quincy. The FLUID GUI builder is a tool for Rapid Application Development (RAD). With it you can quickly design the windows and menus of your application. FLUID also generates the associated C++ source code.  
+__Win32 API:__ This is the native Windows "Applications Programmer Interface". It was already available under previous versions of Quincy. It is fast, powerful, integrates natively with Windows, and is without controversy the hardest to learn of the three libraries on offer.  
+__Koolplot:__ This simple graph plotting library is built on top of WinBGIm. It allow programmers to produce 2D graphs extremely simply. It is very practical for scientists or engineers writing C or C++ programs with Quincy.  
+  * **Help and Example Pages:  
+**C and C++ language and library references are essential to the programmer and have been added to Quincy 2005.  
+More commented example programs and tutorials are progressively added with each new version of Quincy.   
+###  Using the Provided Graphic Libraries in Quincy 2005
+To develop software using a graphics library supported by Quincy, a project file must be created using the menu entry: [File]->[New]->[Project]. This will open a _Project Properties_ page: 
+![Project Properties Screen](../pics/ProjectProperties.gif)
+Select the type of program you want to build.  
+If a graphics type is selected, the associated graphics libraries will be linked automatically to the program by Quincy. 
+A graphical program that displays in the usual windows may also come with a supplementary "console" (the white-on-black "DOS" screen) that can be used for standard input/output, or for displaying error messages. If that is what you want, you must select the "With Console" tick-box by clicking on it. 
+A FLTK application is special in that the standard FLTK libraries may need to be supplemented by extra libraries if your program uses images, or forms, or extra functions available in OpenGL. These tick-boxes become available when "FLTK application" is selected. 
+![FLTK libraries tick-boxes](../pics/fltkLibraries.gif)  
+###  Installing and Using Other 3rd Party Libraries in Quincy 2005
+**Installing:**  
+You may import other 3rd party libraries to be used in Quincy. To get these to work in Quincy, you must install the 3rd party header files (with _.h_ extension) into the _...\quincy\include_ folder, and you must install the 3rd party libraries (with _.a_ extension) into the _...\quincy\lib_ folder. 
+To ensure that 3rd party libraries you have installed as above are linked against a program that uses them, you must tell Quincy to flag them to the linker. In order to do this, you must indicate the library to use in the [Tools]->[Options]->[Build] screen as a linker option.
+**Example:** In the "Options" screen below, the extra library "libconio.a" (which already exists in the _quincy/lib "_ folder) is requested by the flag _-l conio._ The conio2 functions stored in "libconio.a" will be linked to the program currently under development when the programmer asks Quincy to build that program. 
+![Linker Options Example](../pics/LinkerOptions.gif)  
+Note that the general rule is to request a library called _libXXX.a_ with the flag _-l XXX_. Leave out the "lib" prefix, and the _.a_ extension from the name. 
+The "libconio.a" library file is part of the 3rd party "conio2" library: a modern replacement for the old Borland-style "conio" library. It is distributed on _sourceforge (http://conio.sourceforge.net _). Conio2 is pre-installed as a 3rd party library in Quincy. It is described in the Programmer's help, and examples of use are given in the Quincy example programs.   
+###   

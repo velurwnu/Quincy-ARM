@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+<TITLE>Quincy User's Guide</TITLE>
+</HEAD>
+<BODY>
+
+
+<H1>Debugging a Program</H1>
+
+<P>Quincy's IDE integrates the 
+
+<a target="_nw" href="http://www.gnu.org">GNU</a> 
+
+debugger named GDB into Quincy's environment, specifically
+
+a modified version of the
+
+<a <A target="_nw" href="http://www.cygwin.com">cygwin</a>
+
+port of GDB. The modification permits Quincy to run GDB to debug 
+a console application on Windows 95/98/ME platforms despite a bug
+in those platforms that gets in the way. If you crave more details,
+read the C Programming Column in the December, 2002 issue of
+
+<a target="_nw" href="http://www.ddj.com">Dr. Dobb's Journal</a>.
+
+
+<p>
+
+Since Quincy uses the 
+
+<A target="_nw" href = "http://www.mingw.org">MinGW</a>
+
+compiler port, Quincy includes an option to use the GDB that is bundled with MinGW GCC. 
+
+The debugger selection option is explained in
+
+<a href="./options.htm">Setting Options</a>
+
+You should use this option only if you are working on non-console applications or if your development platform is Windows NT/2000/XP. This version of the debugger is not as current as the other and might give you trouble with complex C++ programs.
+
+<h2>Compile for Debugging</h2>
+
+To debug a program, it must be compiled and linked with debugging information included. Select this option as explained in 
+
+<a href="./options.htm">Setting Options</a>.
+
+This option makes an executable program binary file much larger than it needs to be once debugging is complete. You should build the program without this option before you distribute it to users. You should thoroughly test the distributable version before distributing it, too.
+
+<h2>The Debugger Console Window</h2>
+
+Quincy's View menu includes an option to view the Debugger Console window shown here:
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig05a.gif"></P>
+
+This window displays the dialog between Quincy and the GDB command line debugger program. It is of interest only if you understand how to operate GDB from the command line and care to see how Quincy emulates a human user. It is also helpful in debugging Quincy itself. Eventually this window might not be available on distributed versions of Quincy.
+
+
+<h2>Debugging Procedures</h2>
+
+These are the procedures involved in debugging a program.
+
+<ul>
+<li><a href="./stepping.htm">Stepping Through a Program</a>
+<li><a href="./breaking.htm">Breakpoints</a>
+<li><a href="./examine.htm">Examining and Modifying Variables</a>
+<li><a href="./watch.htm">Watching Variables</a>
+<li><a href="./stopping.htm">Stopping a Program</a>
+</ul>
+
+<p>
+<br>
+<center>
+<a href="./running.htm">
+<--previous page</a>
+<a href="./stepping.htm">
+next page--></a>
+</center>
+
+</BODY>
+</HTML>
+

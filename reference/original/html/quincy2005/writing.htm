@@ -1,0 +1,115 @@
+<HTML>
+<HEAD>
+<TITLE>Quincy User's Guide</TITLE>
+</HEAD>
+<BODY>
+
+<H1>Writing New Programs</H1>
+
+<P>You write a new program by building a source code file, setting options for the program, saving the program to disk, and then compiling the program. First you must create a new file.</P>
+
+<H2>Creating a Source Code File</H2>
+
+<P>To create a source code file from scratch:</P>
+<OL>
+
+<LI>Click the New tool button.</LI>
+<P><IMG SRC="./pics/new.gif">
+<LI>Or choose the New command on the File menu.</LI>
+<P>Quincy opens the New dialog shown here.</P>
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig12.gif"></P>
+
+<LI>Select the kind of source code file you are building. A C++ file will be saved with the .cpp file extension and will be compiled by the C++ compiler. A C file will be saved with the .c file extension and will be compiled by the C compiler. A Header file will be saved with the .h extension, signifying a header file you include in your C and C++ source code files.</LI>
+
+<p>
+Note: Project files are discussed in 
+
+<a href="./projects.htm">Working with Projects</a>
+
+<p>
+
+<LI>Click OK.</LI>
+<P>Quincy creates an empty text file with the name Textn, where n is the next available number for Quincy to assign to a text file. You will probably want to change the name to something more meaningful when you save the file. This file has not been saved to disk yet. You cannot compile the program until you have saved the source code file.</P>
+
+<LI>Use the text editing commands discussed in
+
+<a href="./editor.htm">Editing Source Code</a>
+
+
+ to write your program.</LI>
+</OL>
+
+<P>
+
+If you scroll the list in the New dialog, you will see that Quincy supports editing three other kinds of files as shown here.
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig12a.gif"></P>
+
+<p>
+Resource source files and DLL export lists are related to Windows programming, and Windows programmers know what they are and how to use them.
+<p>
+ASCII text files are just that. Quincy will save them with the extension .txt.
+
+
+<a name=01><H2>Saving a Source Code File</H2></a>
+<P>Before you can compile and test your program, you must save it to disk. Before you can compile a program that includes a header file in a source code file, you must save the header file to disk.</P>
+<P>To save the source code file:</P>
+<OL>
+
+<LI>Click the Save tool button.</LI>
+<P><IMG SRC="./pics/save.gif">
+<LI>Or press Ctrl+S.</LI>
+<LI>Or choose the Save command on the File menu.</LI>
+<P>If the source code file was already saved earlier, Quincy writes the current version over the old one. If the source code file is a new one that you have not yet saved, Quincy opens the Save As dialog box shown here.</P>
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig13.gif"></P>
+
+<LI>Enter the source code file name in the File Name field. You can omit the extension. Quincy uses the extension selected in the Save As Type dropdown listbox.</LI>
+<LI>Ensure that the Save As dialog box is positioned at the Windows folder where you want to save the source code file. If not, use the dialog box to navigate to the correct folder.</LI>
+<LI>Click the Save button.</LI></OL>
+
+<P>To save all the source code files loaded into the Quincy IDE:</P>
+<OL>
+
+<LI>Click the Save All tool button.</LI>
+<P><IMG SRC="./pics/saveall.gif">
+<LI>Or choose the Save All command on the File menu.</LI>
+</OL>
+
+<P>NOTE: Remember when you save header files to put them in the same folder as source code files that include them with the <I>#include "file.h"</I> notation. If you save the header files in a different folder, the source code files that include them must use the <I>#include &lt;file.h&gt;</I> notation, and Quincy's options must be set to tell Quincy where to find such header files as explained in 
+
+<a href="./options.htm">Setting Options</a>
+
+</P>
+
+<H2>Using Save As</H2>
+<P>You can save an existing file that was saved earlier and give it a different name by choosing the Save As command on the File menu to open the Save As dialog box. Follow the procedure described in 
+
+<a href=#01>Saving a Source Code File</a>
+
+beginning with step 4. The original file is not changed by this procedure.</P>
+
+<H2>Working With Multiple Source Code Files.</H2>
+
+<P>Quincy is a Windows <I>Multiple Document Interface</I> (MDI) application, which means that you can open and work with more than one source code file at a time as shown here.</P>
+
+<P ALIGN="CENTER"><IMG SRC="./pics/fig14.gif"></P>
+
+<P>If your program involves more than one translation unit--that is, a combination of multiple C files, C++ files, and libraries--you must organize the program into a Project before you can link the translation units and run the program. 
+This procedure is discussed in
+
+<a href="./projects.htm">Working with Projects</a>.
+
+
+<p>
+<br>
+<center>
+<a href="./stopping.htm">
+<--previous page</a>
+<a href="./editor.htm">
+next page--></a>
+</center>
+
+</BODY>
+</HTML>

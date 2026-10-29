@@ -1,0 +1,37 @@
+Quincy is an integrated development environment (IDE) for C or C++.
+It works under Windows 32 (including with Vista from version 1.3)
+
+Quincy combines a programmer's editor, compiler, debugger and other development tools into one 32-bit Windows application. Quincy uses the MinGW port of the GCC compiler system.
+
+Quincy 2005 is open-source freeware and is released without any licencing restriction.
+Quincy 2005 is based on Al Stevens' Quincy 2002 IDE. Quincy 2002 is also open source freeware and was released without any licencing restriction whatsoever, see http://www.alstevens.com/quincyfaq.html
+
+This release includes the following components:
+
+- Quincy 2005 v. 1.3: Open-source C/C++ programming environment. 
+	See http://quincy.codecutter.org
+- MingW  5.0.3: Open-source port of the GCC compiler with GDB debugger and developemnt tools.
+	with: mingw-runtime-3.14, binutils-2.17.50-20060824-1,
+	      gcc-core-4.2.1-sjlj-2, gcc-g++-4.2.1-sjlj-2, w32api-3.11
+		  gdb-6.7.50.20071127-mingw
+	See http://www.mingw.org
+- Astyle  1.21: Open-source code beautifier. 
+	See http://astyle.sourceforge.net
+- FLTK    1.1.8: Open-source cross-platform GUI toolkit, With the Fluid GUI builder.
+	See http://fltk.org
+- Weditres 2.78 Windows Resources Editor (Part of LCC32)
+	See http://www.cs.virginia.edu/~Elcc-win32/
+- WinBGIm    6.0 - Dec 2005: Open-source emulation of Borland BGI graphics for Windows. 
+	See http://winbgim.codecutter.org
+- koolplot   1.3: Open-source 2D graph plotting library under WinBGIm. 
+	See http://koolplot.codecutter.org
+- C/C++ Reference: C and C++ language help (19/01/2008 update)
+	See http://cppreference.com
+- glibc Manual:	The GNU C library manual,
+	see http://www.gnu.org/software/libc/manual/
+- gcc User Guide
+	see http://gcc.gnu.org/onlinedocs/
+
+The latest version of Quincy 2005 and the source code are available at
+http://quincy.codecutter.org
+

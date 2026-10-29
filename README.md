@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="resources/icon-128.png" width="128" alt="Quincy 2005 Icon">
+
 # Quincy 2005 for macOS (Apple Silicon)
 
 **English** | [Русский](#quincy-2005-для-macos-apple-silicon-ru)

@@ -46,6 +46,17 @@ build/Quincy 2005.app
 ```
 
 > [!NOTE]
+> **Code Signing & Opening on macOS:**
+> Applications are signed using a free **Apple Development: Personal Team** certificate (or ad-hoc signature). Because free developer certificates are not notarized by Apple, macOS Gatekeeper may show a security prompt when opening `Quincy 2005.app` for the first time.
+>
+> How to launch the app:
+> - **Right-click (or Control-click)** `Quincy 2005.app` in Finder → select **"Open"** → confirm by clicking **"Open"**; or
+> - Open **System Settings** → **Privacy & Security** → scroll down to the Security section and click **"Open Anyway"**; or
+> - In Terminal, remove the quarantine attribute:
+>   ```bash
+>   xattr -cr "build/Quincy 2005.app"
+>   ```
+>
 > If macOS restricts the debugger from attaching to processes, enable developer mode once in Terminal:
 > ```bash
 > sudo DevToolsSecurity -enable
@@ -135,6 +146,17 @@ build/Quincy 2005.app
 ```
 
 > [!NOTE]
+> **Цифровая подпись и первый запуск на macOS:**
+> Приложение подписано бесплатным сертификатом **Apple Development: Personal Team** (или ad-hoc подписью). Так как персональный сертификат разработчика не проходит платную нотаризацию Apple, система защиты macOS Gatekeeper при первом запуске может заблокировать открытие.
+>
+> Как запустить приложение:
+> - **ПКМ по приложению** → «Открыть» → подтвердить; либо
+> - **Системные настройки** → **Конфиденциальность и безопасность** → нажать **«Всё равно открыть»**; либо
+> - В терминале снять атрибут карантина:
+>   ```bash
+>   xattr -cr "build/Quincy 2005.app"
+>   ```
+>
 > Если система блокирует подключение отладчика к процессам, один раз выполните в Терминале:
 > ```bash
 > sudo DevToolsSecurity -enable
